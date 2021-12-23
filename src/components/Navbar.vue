@@ -25,8 +25,8 @@
       <!-- right items -->
       <div class="lg:self-stretch lg:flex mt-4 lg:mt-0 border-t lg:border-t-0 pt-4 lg:pt-0">
         <ul class="text-left self-stretch justify-end lg:flex space-y-2 lg:space-y-0 items-center lg:space-x-3 text-opacity-70 hover:text-opacity-100">
-          <li><a href="//twitter.com/acapunks" target="_blank" rel="noopener noreferrer" class="text-white text-opacity-70 hover:text-opacity-100"><fa :icon="['fab', 'twitter']" class="mr-1" />Twitter</a></li>
-          <li><a href="//discord.com/acapunks" target="_blank" rel="noopener noreferrer" class="text-white text-opacity-70 hover:text-opacity-100"><fa :icon="['fab', 'discord']" class="mr-1" />Discord</a></li>
+          <li><a href="https://twitter.com/acapunks" target="_blank" rel="noopener noreferrer" class="text-white text-opacity-70 hover:text-opacity-100"><fa :icon="['fab', 'twitter']" class="mr-1" />Twitter</a></li>
+          <li><a href="https://discord.com/acapunks" target="_blank" rel="noopener noreferrer" class="text-white text-opacity-70 hover:text-opacity-100"><fa :icon="['fab', 'discord']" class="mr-1" />Discord</a></li>
         </ul>
         <div class="lg:ml-8">
           <button class="border rounded-full px-12 py-3 my-4 lg:my-0">Connect to Wallet</button>
