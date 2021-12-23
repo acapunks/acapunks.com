@@ -1,5 +1,5 @@
 <template>
-  <section class="text-center text-gray-800 py-24" id="faq">
+  <section id="faq" class="text-center text-gray-800 py-24">
     <div class="container mx-auto px-4">
       <div class="mb-8">
         <h2 class="text-4xl mb-6 text-gray-900 font-black">FAQ</h2>
@@ -88,7 +88,7 @@
   background-image: url('~@/assets/images/bg-faq.svg');
 
   .question {
-    @apply mb-8 lg:w-1/3 lg:inline-block lg:px-4 bg-gray-200 border border-gray-200 rounded-3xl shadow-md px-16 pb-8 mt-16 lg:mx-12;
+    @apply mb-8 lg:w-1/3 lg:inline-block bg-gray-200 border border-gray-200 rounded-3xl shadow-md px-8 pb-10 mt-16 lg:mx-12;
 
     & .icon {
       @apply text-6xl relative -top-9 bg-acala-gradient p-1 rounded-xl text-white;
