@@ -7,6 +7,16 @@ module.exports = {
         acared: '#e40c5b',
         acaorange: '#ff4c3b',
         acapurple: '#645aff'
+      },
+      minWidth: {
+        '1/4': '25vw',
+        '1/3': '33vw',
+        '1/2': '50vw'
+      },
+      maxWidth: {
+        '1/4': '25vw',
+        '1/3': '33vw',
+        '1/2': '50vw'
       }
     },
     fontFamily: {
