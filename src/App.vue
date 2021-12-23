@@ -7,8 +7,8 @@
 
   <!-- footer -->
   <footer class="py-3 bg-gray-200 text-center">
-    <img src="@/assets/images/powered_by.webp" class="h-3 inline-block mr-2">
-    <a target="_blank" href="https://acala.network" rel="noopenner norefererr"><img src="@/assets/images/acala.svg" class="h-8 inline-block"></a>
+    Powered By
+    <a target="_blank" href="https://acala.network" rel="noopenner norefererr"><img src="@/assets/images/acala.svg" class="h-9 inline-block relative" style="bottom: 1.1pt;"></a>
   </footer>
 
   <!-- privacy -->
