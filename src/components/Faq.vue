@@ -7,7 +7,7 @@
       </div>
 
       <div class="flex flex-col lg:flex-row lg:flex-wrap lg:justify-center">
-        <div class="mb-8 lg:w-1/3 lg:inline-block lg:px-4 bg-gray-300 border border-gray-200 rounded-3xl shadow-md px-16 pb-8 mt-16 lg:mx-12">
+        <div class="mb-8 lg:w-1/3 lg:inline-block lg:px-4 bg-gray-200 border border-gray-200 rounded-3xl shadow-md px-16 pb-8 mt-16 lg:mx-12">
           <span class="text-6xl relative -top-9 bg-acala-gradient p-1 rounded-xl text-white"><fa icon="dog" /></span>
           <h3 class="text-2xl mb-6 text-gray-900 font-black">Rapidly build modern websites without ever leaving your HTML.</h3>
           <p class="mb-4">
@@ -17,7 +17,7 @@
           </p>
         </div>
 
-        <div class="mb-8 lg:w-1/3 lg:inline-block lg:px-4 bg-gray-300 border border-gray-200 rounded-3xl shadow-md px-16 pb-8 mt-16 lg:mx-12">
+        <div class="mb-8 lg:w-1/3 lg:inline-block lg:px-4 bg-gray-200 border border-gray-200 rounded-3xl shadow-md px-16 pb-8 mt-16 lg:mx-12">
           <span class="text-6xl relative -top-9 bg-acala-gradient p-1 rounded-xl text-white"><fa icon="dog" /></span>
           <h3 class="text-2xl mb-6 text-gray-900 font-black">"Best practices" don't actually work.</h3>
           <p class="mb-4">
@@ -30,7 +30,7 @@
           </p>
         </div>
 
-        <div class="mb-8 lg:w-1/3 lg:inline-block lg:px-4 bg-gray-300 border border-gray-200 rounded-3xl shadow-md px-16 pb-8 mt-16 lg:mx-12">
+        <div class="mb-8 lg:w-1/3 lg:inline-block lg:px-4 bg-gray-200 border border-gray-200 rounded-3xl shadow-md px-16 pb-8 mt-16 lg:mx-12">
           <span class="text-6xl relative -top-9 bg-acala-gradient p-1 rounded-xl text-white"><fa icon="dog" /></span>
           <h3 class="text-2xl mb-6 text-gray-900 font-black">An API for your design system.</h3>
           <p class="mb-4">
@@ -41,7 +41,7 @@
           </p>
         </div>
 
-        <div class="mb-8 lg:w-1/3 lg:inline-block lg:px-4 bg-gray-300 border border-gray-200 rounded-3xl shadow-md px-16 pb-8 mt-16 lg:mx-12">
+        <div class="mb-8 lg:w-1/3 lg:inline-block lg:px-4 bg-gray-200 border border-gray-200 rounded-3xl shadow-md px-16 pb-8 mt-16 lg:mx-12">
           <span class="text-6xl relative -top-9 bg-acala-gradient p-1 rounded-xl text-white"><fa icon="dog" /></span>
           <h3 class="text-2xl mb-6 text-gray-900 font-black">Is this the world's largest virtual fashion show?</h3>
           <p class="mb-4">
