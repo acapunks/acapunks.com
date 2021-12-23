@@ -4,9 +4,7 @@
     <div class="self-stretch flex items-center justify-between">
       <!-- logo -->
       <div class="self-stretch flex items-center mr-4">
-        <a href="/" class="inline-flex items-center">
-          <img src="@/assets/logo.png" width="48" height="48"><span>Acapunks</span>
-        </a>
+        <a href="/" class="inline-flex items-center"><img src="@/assets/images/brand.png" width="48" height="48" class="mr-2">Acapunks</a>
       </div>
 
       <!-- navbar button; visible only in mobile -->
