@@ -105,6 +105,11 @@
 
       & a {
         @apply text-acared border-b inline-block;
+
+        &:hover {
+          @apply underline;
+          text-underline-offset: 3pt;
+        }
       }
     }
   }
