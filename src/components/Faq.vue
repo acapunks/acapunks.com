@@ -7,59 +7,72 @@
       </div>
 
       <div class="flex flex-col lg:flex-row lg:flex-wrap lg:justify-center">
-        <div class="mb-8 lg:w-1/3 lg:inline-block lg:px-4 bg-gray-200 border border-gray-200 rounded-3xl shadow-md px-16 pb-8 mt-16 lg:mx-12">
-          <span class="text-6xl relative -top-9 bg-acala-gradient p-1 rounded-xl text-white"><fa icon="dog" /></span>
-          <h3 class="text-2xl mb-6 text-gray-900 font-black">Rapidly build modern websites without ever leaving your HTML.</h3>
-          <p class="mb-4">
-            A utility-first CSS framework packed with classes like <code>flex</code>,
-            <code>pt-4</code>, <code>text-center</code> and <code>rotate-90</code> that
-            can be composed to build any design, directly in your markup.
+        <div class="question">
+          <span class="icon"><fa icon="dog" /></span>
+          <h3 class="title">What are AcaPunks?</h3>
+          <p class="answer">
+            AcaPunks are 10,000 uniquely generated characters. No two are exactly alike,
+            and each one of them can be officially owned by a single person on the Acala
+            blockchain. Participate in Acala DeFis with an AcaPunk as your virtual identity!
           </p>
         </div>
 
-        <div class="mb-8 lg:w-1/3 lg:inline-block lg:px-4 bg-gray-200 border border-gray-200 rounded-3xl shadow-md px-16 pb-8 mt-16 lg:mx-12">
-          <span class="text-6xl relative -top-9 bg-acala-gradient p-1 rounded-xl text-white"><fa icon="dog" /></span>
-          <h3 class="text-2xl mb-6 text-gray-900 font-black">"Best practices" don't actually work.</h3>
-          <p class="mb-4">
-            I've written <a href="//adamwathan.me/css-utility-classes-and-separation-of-concerns/" rel="noopenner noreferrer" class="text-green-900 hover:underline hover:font-bold">a few thousand words</a>
-            on why traditional "semantic class names" are the reason CSS is hard to
-            maintain, but the truth is you're never going to believe me until you
-            actually try it. If you can suppress the urge to retch long enough to give
-            it a chance, I really think you'll wonder how you ever worked with CSS any
-            other way.
+        <div class="question">
+          <span class="icon"><fa icon="dog" /></span>
+          <h3 class="title">How will Acapunks launch?</h3>
+          <p class="answer">
+            Once the Acala EVM+ come online, we will deploy the smart contract ASAP. This is
+            expected to happen in early Q1 2022.
+          </p>
+          <p class="answer">
+            AcaPunks is planned to launch in 2 phases. In the first phase, whitelisted members
+            will be able to claim their AcaPunks; 1 hour after the first phase, public sale
+            will begin and everyone will have a chance to mint their unique AcaPunks. Please
+            pay attention to our official social media for more details.
           </p>
         </div>
 
-        <div class="mb-8 lg:w-1/3 lg:inline-block lg:px-4 bg-gray-200 border border-gray-200 rounded-3xl shadow-md px-16 pb-8 mt-16 lg:mx-12">
-          <span class="text-6xl relative -top-9 bg-acala-gradient p-1 rounded-xl text-white"><fa icon="dog" /></span>
-          <h3 class="text-2xl mb-6 text-gray-900 font-black">An API for your design system.</h3>
-          <p class="mb-4">
-            Utility classes help you work within the constraints of a system instead of littering
-            your stylesheets with arbitrary values. They make it easy to be consistent with color
-            choices, spacing, typography, shadows, and everything else that makes up a well-engineered
-            design system.
+        <div class="question">
+          <span class="icon"><fa icon="dog" /></span>
+          <h3 class="title">How can I be whitelisted?</h3>
+          <p class="answer">
+            Active community members that interact to our official
+            <a href="https://twitter.com/acapunks" target="_blank" rel="noopenner noreferrer">twitter</a>
+            and <a href="https://discord.com/acapunks" target="_blank" rel="noopenner noreferrer">discord</a>
+            will have a chance to get their Acapunks in stage 1 mint.
           </p>
         </div>
 
-        <div class="mb-8 lg:w-1/3 lg:inline-block lg:px-4 bg-gray-200 border border-gray-200 rounded-3xl shadow-md px-16 pb-8 mt-16 lg:mx-12">
-          <span class="text-6xl relative -top-9 bg-acala-gradient p-1 rounded-xl text-white"><fa icon="dog" /></span>
-          <h3 class="text-2xl mb-6 text-gray-900 font-black">Is this the world's largest virtual fashion show?</h3>
-          <p class="mb-4">
-            With five minutes to kill on your commute, or between meetings, which app do you open?
-            For many of us, it is Twitter, Instagram, TikTok or gaming apps. But for more and more
-            teenagers, it's a metaverse platform to check-in on their avatar.
+        <div class="question">
+          <span class="icon"><fa icon="dog" /></span>
+          <h3 class="title">Where can I trade my AcaPunks?</h3>
+          <p class="answer">
+            You can trade your AcaPunks directly on the <a href="#">Market Place</a> page. More marketplaces
+            will be supported after the minting stage is completed. Ww also plan to launch
+            Acalart — a marketplace where you can view and trade any NFTs on the Acala Network.
+            Stay tuned.
           </p>
-          <p class="mb-4">
-            Your avatar can resemble how you look in the real world. Or, you could pretend to be
-            someone, or something, totally different. That's half the attraction.
+        </div>
+
+        <div class="question">
+          <span class="icon"><fa icon="dog" /></span>
+          <h3 class="title">I am new to NFTs. How can I get an AcaPunk?</h3>
+          <p class="answer">
+            First, set up your <a href="https://wiki.acala.network/acala/acala-account" rel="noopenner noreferrer" target="_blank">Acala account</a>.
+            On the mint page, you can connect to and mint 1 Acapunk for 100 ACA starting from
+            the launch time. The launching details can be found on the official social media.
+            However, it will be too late to get one at mint cost if all the Acapunks are sold
+            out.
           </p>
-          <p class="mb-4">
-            "My avatar is who I want to be on that day," says Monica Louise, who is also known as
-            Monica Quin on South Korea's hugely popular metaverse social media app, Zepeto.
-          </p>
-          <p class="mb-4">
-            "In the real world, it's not easy for us to cut our hair and then grow it back, but
-            in the digital world, we can do that with just one click."
+        </div>
+
+        <div class="question">
+          <span class="icon"><fa icon="dog" /></span>
+          <h3 class="title">Who is behind the project?</h3>
+          <p class="answer">
+            AcaPunks is built by <a href="#" target="_blank" rel="noopenner noreferrer">Parachain Labs</a>,
+            a team dedicated to develop NFTs and Dapps on the Polkadot parachains. AcaPunks
+            and Parachain Labs are not affiliated with the CryptoPunks or Larva Labs.
           </p>
         </div>
       </div>
@@ -69,7 +82,31 @@
 </template>
 
 <style lang="scss">
+@import '@/assets/scss/bg';
+
 #faq {
   background-image: url('~@/assets/images/bg-faq.svg');
+
+  .question {
+    @apply mb-8 lg:w-1/3 lg:inline-block lg:px-4 bg-gray-200 border border-gray-200 rounded-3xl shadow-md px-16 pb-8 mt-16 lg:mx-12;
+
+    & .icon {
+      @apply text-6xl relative -top-9 bg-acala-gradient p-1 rounded-xl text-white;
+    }
+
+    & .title {
+      @apply text-2xl mb-6 text-gray-900 font-black;
+    }
+
+    & .answer {
+      &:not(:last-child) {
+        @apply mb-4;
+      }
+
+      & a {
+        @apply text-acared border-b inline-block;
+      }
+    }
+  }
 }
 </style>
