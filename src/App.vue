@@ -10,16 +10,26 @@
     <img src="@/assets/images/powered_by.webp" class="h-3 inline-block mr-2">
     <a target="_blank" href="https://acala.network" rel="noopenner norefererr"><img src="@/assets/images/acala.svg" class="h-8 inline-block"></a>
   </footer>
+
+  <!-- privacy -->
+  <popup
+    title="FBI is watching you!"
+    content="A battle for voting rights. An uncertain future for abortion rights. Inequities in housing, caregiving, and healthcare access. Millions turn to Vox to understand complex problems such as these, and potential solutions. Financial gifts from readers help us plan that work and keep it free. Give today to help us hit our goal of 6,000 new financial contributions by the new year."
+    class="fixed bottom-0 right-0 bg-gray-100 px-6 py-4 rounded-lg m-2 shadow-md"
+    style="min-width: 20vw; max-width: 30vw"
+  />
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
 import Navbar from '@/components/Navbar.vue'
+import Popup from '@/components/Popup.vue'
 
 export default defineComponent({
   name: 'App',
   components: {
-    navbar: Navbar
+    navbar: Navbar,
+    popup: Popup
   }
 })
 </script>
