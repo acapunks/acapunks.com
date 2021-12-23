@@ -1,5 +1,5 @@
 <template>
-  <nav class="lg:flex px-3 py-3 shadow-md">
+  <nav class="lg:flex px-3 py-3 shadow-md bg-acared text-white">
 
     <div class="self-stretch flex items-center justify-between">
       <!-- logo -->
@@ -27,8 +27,8 @@
       <!-- right items -->
       <div class="lg:self-stretch lg:flex mt-4 lg:mt-0 border-t lg:border-t-0 pt-4 lg:pt-0">
         <ul class="text-left self-stretch justify-end lg:flex space-y-2 lg:space-y-0 items-center lg:space-x-3">
-          <li><a><fa :icon="['fab', 'twitter']" class="mr-1" />Twitter</a></li>
-          <li><a><fa :icon="['fab', 'discord']" class="mr-1" />Discord</a></li>
+          <li><a href="//twitter.com/acapunks" target="_blank" rel="noopener noreferrer"><fa :icon="['fab', 'twitter']" class="mr-1" />Twitter</a></li>
+          <li><a href="//discord.com/acapunks" target="_blank" rel="noopener noreferrer"><fa :icon="['fab', 'discord']" class="mr-1" />Discord</a></li>
         </ul>
         <div class="lg:ml-8">
           <button class="border rounded-full px-12 py-3 my-4 lg:my-0">Connect to Wallet</button>

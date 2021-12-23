@@ -1,6 +1,6 @@
 <template>
   <navbar class="fixed top-0 right-0 left-0" />
-  <div style="margin-top: 72px">
+  <div style="margin-top: 72px" class="acala-gradient-bg-light min-h-screen">
     <router-view />
   </div>
 </template>
@@ -24,18 +24,5 @@ export default defineComponent({
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
 }
 </style>
