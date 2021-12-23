@@ -1,7 +1,5 @@
 <template>
-  <div class="home">
-    <mint />
-  </div>
+  <mint />
 </template>
 
 <script lang="ts">
