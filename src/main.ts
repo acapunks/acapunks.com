@@ -6,10 +6,10 @@ import '@/assets/css/tailwind.css'
 import '@/assets/scss/main.scss'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faBars } from '@fortawesome/free-solid-svg-icons'
+import { faBars, faDog } from '@fortawesome/free-solid-svg-icons'
 import { faTwitter, faDiscord } from '@fortawesome/free-brands-svg-icons'
 
-library.add(faTwitter, faDiscord, faBars)
+library.add(faTwitter, faDiscord, faBars, faDog)
 
 createApp(App)
   .use(store)
