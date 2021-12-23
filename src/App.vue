@@ -6,7 +6,7 @@
   </main>
 
   <!-- footer -->
-  <footer class="py-3 bg-white">
+  <footer class="py-3 bg-white text-center">
     <img src="@/assets/images/powered_by.webp" class="h-3 inline-block mr-2">
     <a target="_blank" href="https://acala.network" rel="noopenner norefererr"><img src="@/assets/images/acala.svg" class="h-8 inline-block"></a>
   </footer>
@@ -23,13 +23,3 @@ export default defineComponent({
   }
 })
 </script>
-
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-</style>
