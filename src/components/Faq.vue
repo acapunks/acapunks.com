@@ -1,5 +1,5 @@
 <template>
-  <section class="text-center text-gray-800 bg-gray-50 py-24">
+  <section class="text-center text-gray-800 py-24" id="faq">
     <div class="container mx-auto px-4">
       <div class="mb-8">
         <h2 class="text-4xl mb-6 text-gray-900 font-black">FAQ</h2>
@@ -68,5 +68,8 @@
   </section>
 </template>
 
-<script lang="ts">
-</script>
+<style lang="scss">
+#faq {
+  background-image: url('~@/assets/images/bg-faq.svg');
+}
+</style>
