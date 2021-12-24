@@ -8,6 +8,9 @@ module.exports = {
         acaorange: '#ff4c3b',
         acapurple: '#645aff'
       },
+      width: {
+        '28/100': '28%'
+      },
       minWidth: {
         '1/4': '25vw',
         '1/3': '33vw',

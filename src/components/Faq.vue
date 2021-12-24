@@ -3,10 +3,9 @@
     <div class="container mx-auto px-4">
       <div class="mb-8">
         <h2 class="text-4xl mb-6 text-gray-900 font-black">FAQ</h2>
-        <p>Designing a web page layout is difficult.</p>
       </div>
 
-      <div class="flex flex-col lg:flex-row lg:flex-wrap lg:justify-center">
+      <div class="flex flex-row flex-wrap justify-around">
         <div class="question">
           <span class="icon"><fa icon="dog" /></span>
           <h3 class="title">What are AcaPunks?</h3>
@@ -100,7 +99,7 @@
   background-image: url('~@/assets/images/bg-faq.svg');
 
   .question {
-    @apply mb-8 lg:w-1/3 lg:inline-block bg-gray-200 border border-gray-200 rounded-3xl shadow-md px-8 pb-10 mt-16 lg:mx-12;
+    @apply mb-8 w-3/4 lg:w-2/5 2xl:w-28/100 inline-block bg-gray-200 border border-gray-200 rounded-3xl shadow-md px-8 pb-10 mt-16 md:mx-6;
 
     & .icon {
       @apply text-6xl relative -top-9 bg-acala-gradient p-1 rounded-xl text-white;
