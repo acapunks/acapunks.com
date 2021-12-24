@@ -1,19 +1,21 @@
 <template>
   <navbar class="fixed top-0 right-0 left-0 z-50" />
 
-  <main style="margin-top: 72px">
-    <router-view />
-  </main>
+  <div class="flex flex-col min-h-screen" style="padding-top: 72px">
+    <main class="flex-grow">
+      <router-view />
+    </main>
 
-  <!-- footer -->
-  <footer class="py-3 bg-gray-200 text-center">
-    Powered By
-    <a target="_blank" href="https://acala.network" rel="noopenner norefererr"><img src="@/assets/images/acala.svg" class="h-9 inline-block relative" style="bottom: 1.1pt;"></a>
-  </footer>
+    <!-- footer -->
+    <footer class="py-3 bg-gray-200 text-center">
+      Powered By
+      <a target="_blank" href="https://acala.network" rel="noopenner norefererr"><img src="@/assets/images/acala.svg" class="h-9 inline-block relative" style="bottom: 1.1pt;"></a>
+    </footer>
+  </div>
 
   <!-- privacy -->
   <popup id="popup" class="fixed bottom-0 right-0 bg-gray-100 px-6 py-4 rounded-lg m-4 min-w-1-4 max-w-screen md:max-w-2/5">
-    <p class="content">By using this website, you have agreed and accept our <a href="/terms-and-conditions">terms and conditions</a>.</p>
+    <p class="content">By using this website, you have agreed and accept our <router-link to="/terms-and-condition">terms and condition</router-link>.</p>
   </popup>
 </template>
 
