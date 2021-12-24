@@ -1,8 +1,7 @@
 <template>
   <div v-if="!closed" class="rounded-md">
-    <h4 v-if="title" class="font-bold text-lg mb-2" :class="titleClasses">{{ title }}</h4>
-    <p class="mb-2" :class="contentClasses"><slot /></p>
-    <p class="text-right"><button class="border text-white bg-green-600 hover:bg-opacity-80 rounded-md py-1 px-3" @click="closePopup">Accept</button></p>
+    <slot />
+    <p class="text-left"><button class="border text-white bg-green-600 hover:bg-opacity-80 rounded-md py-1 px-3" @click="closePopup">Accept</button></p>
   </div>
 </template>
 
@@ -11,25 +10,6 @@ import { defineComponent, ref } from 'vue'
 
 export default defineComponent({
   name: 'Popup',
-
-  props: {
-    title: {
-      type: String,
-      default: ''
-    },
-    titleClasses: {
-      type: Array,
-      default() {
-        return []
-      }
-    },
-    contentClasses: {
-      type: Array,
-      default() {
-        return []
-      }
-    }
-  },
 
   setup() {
     const closed = ref(false)
@@ -40,3 +20,13 @@ export default defineComponent({
   }
 })
 </script>
+
+<style lang="scss">
+.title {
+  @apply font-bold text-lg mb-2;
+}
+
+.content {
+  @apply mb-2;
+}
+</style>
