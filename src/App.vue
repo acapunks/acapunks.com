@@ -34,19 +34,21 @@ export default defineComponent({
 </script>
 
 <style lang="scss">
-main,
-#popup {
-  a {
-    @apply text-acared;
+#app {
+  main,
+  #popup {
+    a {
+      @apply text-acared;
 
-    &:hover {
-      @apply underline;
-      text-underline-offset: 3pt;
+      &:hover {
+        @apply underline;
+        text-underline-offset: 3pt;
+      }
     }
   }
-}
 
-#popup {
-  box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.2);
+  #popup {
+    box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.2);
+  }
 }
 </style>

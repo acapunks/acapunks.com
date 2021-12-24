@@ -1,6 +1,6 @@
 <template>
-  <mint />
-  <faq />
+  <mint id="mint" />
+  <faq id="faq" />
 </template>
 
 <script lang="ts">

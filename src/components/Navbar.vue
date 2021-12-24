@@ -17,9 +17,12 @@
       <!-- left items -->
       <div class="lg:self-stretch lg:flex mt-4 lg:mt-0 ">
         <ul class="text-left self-stretch lg:flex items-center space-y-2 lg:space-y-0 lg:space-x-3">
-          <li><a href="#" class="text-white text-opacity-70 hover:text-opacity-100">Mint</a></li>
+          <li><router-link to="/#mint" class="text-white text-opacity-70 hover:text-opacity-100">Mint</router-link></li>
+          <li><router-link to="/#faq" class="text-white text-opacity-70 hover:text-opacity-100">FAQ</router-link></li>
+          <!--
           <li><a href="#" class="text-white text-opacity-70 hover:text-opacity-100">View my Punks</a></li>
           <li><a href="#" class="text-white text-opacity-70 hover:text-opacity-100">Market Place</a></li>
+          -->
           <li><router-link to="/terms-and-condition" class="text-white text-opacity-70 hover:text-opacity-100">Terms and Condition</router-link></li>
         </ul>
       </div>

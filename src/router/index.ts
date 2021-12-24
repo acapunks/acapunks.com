@@ -1,4 +1,9 @@
-import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
+import {
+  createRouter,
+  createWebHistory,
+  RouteLocationNormalized,
+  RouteRecordRaw
+} from 'vue-router'
 import Home from '@/views/Home.vue'
 
 const routes: Array<RouteRecordRaw> = [
@@ -16,7 +21,15 @@ const routes: Array<RouteRecordRaw> = [
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
-  routes
+  routes,
+  scrollBehavior(to: RouteLocationNormalized, from: RouteLocationNormalized) {
+    if (to.hash) {
+      return {
+        el: to.hash,
+        behavior: from.name === to.name ? 'smooth' : 'auto'
+      }
+    }
+  }
 })
 
 export default router
