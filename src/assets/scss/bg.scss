@@ -1,7 +1,12 @@
-@import "color";
+@import 'color';
 
 .bg-acala-gradient {
-  background: linear-gradient(328.08deg, $acapurple -40.69%, $acared 36.17%, $acaorange 79.87%);
+  background: linear-gradient(
+    328.08deg,
+    $acapurple -40.69%,
+    $acared 36.17%,
+    $acaorange 79.87%
+  );
 }
 
 .bg-acala-gradient-light {
