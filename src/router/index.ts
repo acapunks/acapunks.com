@@ -26,7 +26,8 @@ const router = createRouter({
     if (to.hash) {
       return {
         el: to.hash,
-        behavior: from.name === to.name ? 'smooth' : 'auto'
+        behavior: from.name === to.name ? 'smooth' : 'auto',
+        top: 74 // navbar height
       }
     }
   }

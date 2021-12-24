@@ -22,6 +22,9 @@ module.exports = {
         '1/2': '50vw',
         '2/5': '40vw',
         '3/5': '60vw'
+      },
+      height: {
+        'screen-no-navbar': 'calc(100vh - 74px)'
       }
     },
     fontFamily: {

@@ -1,5 +1,5 @@
 <template>
-  <section class="h-screen flex justify-center items-center bg-acala-gradient-light">
+  <section class="h-screen-no-navbar flex justify-center items-center bg-acala-gradient-light">
     <figure class="shadow-lg">
       <img src="@/assets/images/mint.gif" width="280" height="280">
       <figcaption class="comment text-center bg-white py-6 rounded-bottom">
