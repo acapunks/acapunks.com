@@ -9,7 +9,7 @@
     <!-- footer -->
     <footer class="py-3 bg-gray-200 text-center">
       Powered By
-      <a target="_blank" href="https://acala.network" rel="noopenner norefererr"><img src="@/assets/images/acala.svg" class="h-9 inline-block relative" style="bottom: 1.1pt;"></a>
+      <a target="_blank" href="https://acala.network" rel="noopenner norefererr"><img src="@/assets/images/acala.svg" class="h-9 inline-block"></a>
     </footer>
   </div>
 
