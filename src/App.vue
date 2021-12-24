@@ -15,7 +15,7 @@
 
   <!-- privacy -->
   <popup id="popup" class="fixed bottom-0 right-0 bg-gray-100 px-6 py-4 rounded-lg m-4 min-w-1-4 max-w-screen md:max-w-2/5">
-    <p class="content">By using this website, you have agreed and accept our <router-link to="/terms-and-condition">terms and condition</router-link>.</p>
+    <p class="content">By using this website, you have agreed and accepted our <router-link to="/terms-and-condition">terms and condition</router-link>.</p>
   </popup>
 </template>
 
