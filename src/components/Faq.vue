@@ -70,9 +70,21 @@
           <span class="icon"><fa icon="dog" /></span>
           <h3 class="title">Who is behind the project?</h3>
           <p class="answer">
-            AcaPunks is built by <a href="#" target="_blank" rel="noopenner noreferrer">Parachain Labs</a>,
+            AcaPunks is built by <a href="https://twitter.com/ParachainLabs" target="_blank" rel="noopenner noreferrer">Parachain Labs</a>,
             a team dedicated to develop NFTs and Dapps on the Polkadot parachains. AcaPunks
             and Parachain Labs are not affiliated with the CryptoPunks or Larva Labs.
+          </p>
+        </div>
+
+        <div class="question">
+          <span class="icon"><fa icon="dog" /></span>
+          <h3 class="title">Roadmap</h3>
+          <p class="answer">
+            AcaPunks aims to be a long-term community-driven project. We plan to explore ideas such as:
+            DAO token airdrops to holders, whitelisting holders to future Parachain Labs projects,
+            sharing the profit of Acalart marketplace and future Defi projects, etc. These are the
+            things we have in mind but we'd like to hear from our community first, before setting our
+            roadmap in stone.
           </p>
         </div>
       </div>
