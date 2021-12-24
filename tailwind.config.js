@@ -16,7 +16,9 @@ module.exports = {
       maxWidth: {
         '1/4': '25vw',
         '1/3': '33vw',
-        '1/2': '50vw'
+        '1/2': '50vw',
+        '2/5': '40vw',
+        '3/5': '60vw'
       }
     },
     fontFamily: {

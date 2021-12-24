@@ -12,11 +12,13 @@
   </footer>
 
   <!-- privacy -->
-  <popup
-    title="FBI is watching you!"
-    content="A battle for voting rights. An uncertain future for abortion rights. Inequities in housing, caregiving, and healthcare access. Millions turn to Vox to understand complex problems such as these, and potential solutions. Financial gifts from readers help us plan that work and keep it free. Give today to help us hit our goal of 6,000 new financial contributions by the new year."
-    class="fixed bottom-0 right-0 bg-gray-100 px-6 py-4 rounded-lg m-4 shadow-md min-w-1-4 max-w-screen md:max-w-1/2"
-  />
+  <popup title="FBI is watching you!" class="fixed bottom-0 right-0 bg-gray-100 px-6 py-4 rounded-lg m-4 min-w-1-4 max-w-screen md:max-w-3/5 popup-shadow">
+    A battle for voting rights. An uncertain future for abortion rights. Inequities in housing,
+    caregiving, and healthcare access. Millions turn to Vox to understand complex problems such
+    as these, and potential solutions. Financial gifts from readers help us plan that work and
+    keep it free. Give today to help us hit our goal of 6,000 new financial contributions by the
+    new year.
+  </popup>
 </template>
 
 <script lang="ts">
@@ -32,3 +34,9 @@ export default defineComponent({
   }
 })
 </script>
+
+<style lang="scss">
+.popup-shadow {
+  box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.2);
+}
+</style>
