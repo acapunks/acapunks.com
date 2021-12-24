@@ -3,6 +3,7 @@
     <div class="container mx-auto px-4">
       <div class="mb-8">
         <h2 class="text-4xl mb-6 text-gray-900 font-black">FAQ</h2>
+        <p>Have questions? Here are the FAQs. Also follow our social media for the latest updates!</p>
       </div>
 
       <div class="flex flex-row flex-wrap justify-around">
@@ -10,9 +11,9 @@
           <span class="icon"><fa icon="dog" /></span>
           <h3 class="title">What are AcaPunks?</h3>
           <p class="answer">
-            AcaPunks are 10,000 uniquely generated characters. No two are exactly alike,
-            and each one of them can be officially owned by a single person on the Acala
-            blockchain. Participate in Acala DeFis with an AcaPunk as your virtual identity!
+            AcaPunks are 10,000 uniquely generated characters. No two are exactly alike, and
+            each one of them can be officially owned by a single person on the Acala blockchain.
+            Participate in Acala DeFis with an AcaPunk as your virtual identity!
           </p>
         </div>
 
@@ -24,10 +25,10 @@
             expected to happen in early Q1 2022.
           </p>
           <p class="answer">
-            AcaPunks is planned to launch in 2 phases. In the first phase, whitelisted members
-            will be able to claim their AcaPunks; 1 hour after the first phase, public sale
-            will begin and everyone will have a chance to mint their unique AcaPunks. Please
-            pay attention to our official social media for more details.
+            AcaPunks is planned to launch in two phases. In the first phase, whitelisted members
+            will be able to claim their AcaPunks; one hour after the first phase, public sale
+            will begin and everyone will have a chance to mint their unique AcaPunks. Please pay
+            attention to our official social media for more details.
           </p>
         </div>
 
@@ -35,7 +36,7 @@
           <span class="icon"><fa icon="dog" /></span>
           <h3 class="title">How can I be whitelisted?</h3>
           <p class="answer">
-            Active community members that interact to our official
+            Active community members that interact with our official
             <a href="https://twitter.com/acapunks" target="_blank" rel="noopenner noreferrer">twitter</a>
             and <a href="https://discord.com/acapunks" target="_blank" rel="noopenner noreferrer">discord</a>
             will have a chance to get their Acapunks in stage 1 mint.
@@ -55,13 +56,11 @@
 
         <div class="question">
           <span class="icon"><fa icon="dog" /></span>
-          <h3 class="title">I am new to NFTs. How can I get an AcaPunk?</h3>
+          <h3 class="title">How can I get an AcaPunk?</h3>
           <p class="answer">
-            First, set up your <a href="https://wiki.acala.network/acala/acala-account" rel="noopenner noreferrer" target="_blank">Acala account</a>.
-            On the mint page, you can connect to and mint 1 Acapunk for 100 ACA starting from
-            the launch time. The launching details can be found on the official social media.
-            However, it will be too late to get one at mint cost if all the Acapunks are sold
-            out.
+            First, set up your <a href="https://metamask.io" target="_blank" rel="noopenner noreferrer">Metamask</a>
+            wallet. On the mint page, you can connect to your wallet and mint 1 Acapunk for 100 ACA.
+            The launching details can be found on the official social media.
           </p>
         </div>
 
@@ -112,15 +111,6 @@
     & .answer {
       &:not(:last-child) {
         @apply mb-4;
-      }
-
-      & a {
-        @apply text-acared border-b inline-block;
-
-        &:hover {
-          @apply underline;
-          text-underline-offset: 3pt;
-        }
       }
     }
   }
