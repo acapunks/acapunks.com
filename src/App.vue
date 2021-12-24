@@ -13,8 +13,7 @@
 
   <!-- privacy -->
   <popup id="popup" class="fixed bottom-0 right-0 bg-gray-100 px-6 py-4 rounded-lg m-4 min-w-1-4 max-w-screen md:max-w-2/5">
-    <p class="content">Use of the tools on this website is strictly at your own risk and is governed by the Terms and Conditions.</p>
-    <p class="content">In short: We cannot undo, reverse, or restore any transaction involving any punk. You take sole responsibility.</p>
+    <p class="content">By using this website, you have agreed and accept our <a href="/terms-and-conditions">terms and conditions</a>.</p>
   </popup>
 </template>
 
@@ -33,7 +32,8 @@ export default defineComponent({
 </script>
 
 <style lang="scss">
-main {
+main,
+#popup {
   a {
     @apply text-acared;
 
