@@ -1,7 +1,7 @@
 <template>
   <navbar class="fixed top-0 right-0 left-0 z-50" />
 
-  <div class="flex flex-col min-h-screen" style="padding-top: 74px">
+  <div class="flex flex-col min-h-screen" style="padding-top: 72px">
     <main class="flex-grow">
       <router-view />
     </main>
@@ -50,13 +50,5 @@ export default defineComponent({
   #popup {
     box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.2);
   }
-
-  /*
-  .is-section:before {
-    height: 74px;
-    content: '';
-    display: block;
-  }
-  */
 }
 </style>

@@ -24,7 +24,7 @@ module.exports = {
         '3/5': '60vw'
       },
       height: {
-        'screen-no-navbar': 'calc(100vh - 74px)'
+        'screen-no-navbar': 'calc(100vh - 72px)'
       }
     },
     fontFamily: {

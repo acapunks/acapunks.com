@@ -1,5 +1,5 @@
 <template>
-  <nav class="lg:flex px-3 py-3 shadow-md bg-acared text-white">
+  <nav class="lg:flex px-3 py-3 shadow-md bg-acared text-white" style="height: 72px">
 
     <div class="self-stretch flex items-center justify-between">
       <!-- logo -->
@@ -43,7 +43,9 @@
           </li>
         </ul>
         <div class="lg:ml-8">
-          <button class="border rounded-full px-12 py-3 my-4 lg:my-0">Connect to Wallet</button>
+          <button class="border rounded-full w-60 my-4 lg:my-0 bg-white bg-opacity-0 hover:bg-opacity-10 h-full" @click="connectToWallet">
+            {{ address ? address.substring(0, 12) : 'Connect To Wallet' }}
+          </button>
         </div>
       </div>
     </div>
@@ -52,18 +54,38 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from 'vue'
+import { defineComponent, ref, onMounted, Ref, UnwrapRef } from 'vue'
+import {
+  addWalletListener,
+  connectToWallet,
+  getCurrentConnectedWallet,
+  isMetaMaskInstalled
+} from '@/store/wallet'
 
 export default defineComponent({
   name: 'Navbar',
 
   setup() {
     const isHidden = ref(true)
+    const address: Ref<UnwrapRef<string | undefined>> = ref(undefined)
+
+    async function bindMetaMask(): Promise<void> {
+      if (!isMetaMaskInstalled()) return
+      address.value = await getCurrentConnectedWallet()
+      addWalletListener(x => (address.value = x))
+    }
+
+    onMounted(() => {
+      bindMetaMask()
+    })
+
     return {
       isHidden,
+      address,
       toggleNavbar() {
         isHidden.value = !isHidden.value
-      }
+      },
+      connectToWallet
     }
   }
 })
