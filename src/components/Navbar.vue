@@ -54,7 +54,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, onMounted, Ref, UnwrapRef } from 'vue'
+import { defineComponent, ref, onMounted } from 'vue'
 import {
   addWalletListener,
   connectToWallet,
@@ -67,12 +67,13 @@ export default defineComponent({
 
   setup() {
     const isHidden = ref(true)
-    const address: Ref<UnwrapRef<string | undefined>> = ref(undefined)
+    const address = ref(undefined as undefined | string)
 
     async function bindMetaMask(): Promise<void> {
-      if (!isMetaMaskInstalled()) return
-      address.value = await getCurrentConnectedWallet()
-      addWalletListener(x => (address.value = x))
+      if (isMetaMaskInstalled()) {
+        address.value = await getCurrentConnectedWallet()
+        addWalletListener(x => (address.value = x))
+      }
     }
 
     onMounted(() => {

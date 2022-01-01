@@ -10,20 +10,11 @@ export function isMetaMaskInstalled(): boolean {
   return typeof window.ethereum !== 'undefined'
 }
 
-export async function connectToWallet(): Promise<string | undefined> {
-  const addresses: Array<string> = await window.ethereum.request({
-    method: 'eth_requestAccounts'
-  })
-
-  /*
-  if (addresses.length === 0) {
-    alert('You have no account')
-    return null
+export async function connectToWallet(): Promise<void> {
+  if (isMetaMaskInstalled()) {
+    // Prompt users for connecting metamask
+    await window.ethereum.request({ method: 'eth_requestAccounts' })
   }
-
-  alert('The address is ' + addresses[0])
-  */
-  return addresses[0]
 }
 
 export async function getCurrentConnectedWallet(): Promise<string | undefined> {
@@ -37,7 +28,6 @@ export function addWalletListener(
   callback: (addr: string | undefined) => void
 ): void {
   window.ethereum.on('accountsChanged', (addresses: string[]) => {
-    console.log(addresses[0])
     callback(addresses[0])
   })
 }
