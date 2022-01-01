@@ -1,5 +1,5 @@
 <template>
-  <nav class="lg:flex px-3 py-3 shadow-md bg-acared text-white" style="height: 72px">
+  <nav class="lg:flex px-3 py-3 shadow-md bg-acared text-white">
 
     <div class="self-stretch flex items-center justify-between">
       <!-- logo -->
