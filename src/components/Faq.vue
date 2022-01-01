@@ -6,7 +6,7 @@
         <p>Have questions? Here are the FAQs. Also follow our social media for the latest updates!</p>
       </div>
 
-      <div class="flex flex-row flex-wrap justify-around">
+      <div class="lg:flex flex-row flex-wrap justify-around">
         <div class="question">
           <span class="icon"><fa icon="dog" /></span>
           <h3 class="title">What are AcaPunks?</h3>
@@ -98,7 +98,7 @@
   background-image: url('~@/assets/images/bg-faq.svg');
 
   .question {
-    @apply mb-8 w-3/4 lg:w-2/5 2xl:w-28/100 inline-block bg-gray-200 border border-gray-200 rounded-3xl shadow-md px-8 pb-10 mt-16 md:mx-6;
+    @apply mb-8 lg:w-2/5 2xl:w-28/100 inline-block bg-gray-200 border border-gray-200 rounded-3xl shadow-md px-4 lg:px-8 pb-10 mt-16 md:mx-6;
 
     .icon {
       @apply text-6xl relative -top-9 bg-acala-gradient p-1 rounded-xl text-white;
