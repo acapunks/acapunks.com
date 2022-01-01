@@ -43,7 +43,7 @@
           </li>
         </ul>
         <div class="lg:ml-8">
-          <button class="border rounded-full w-60 my-4 lg:my-0 bg-white bg-opacity-0 hover:bg-opacity-10 h-full" @click="connectToWallet">
+          <button class="border rounded-full w-60 py-3 lg:py-0 my-4 lg:my-0 bg-white bg-opacity-0 hover:bg-opacity-10 h-full" @click="connectToWallet">
             {{ address ? address.substring(0, 12) : 'Connect To Wallet' }}
           </button>
         </div>
