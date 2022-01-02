@@ -35,18 +35,6 @@ export default defineComponent({
 
 <style lang="scss">
 #app {
-  main,
-  #popup {
-    a {
-      @apply text-acared;
-
-      &:hover {
-        @apply underline;
-        text-underline-offset: 3pt;
-      }
-    }
-  }
-
   #popup {
     box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.2);
   }

@@ -1,0 +1,12 @@
+body {
+  @apply text-gray-800;
+
+  a {
+    @apply text-acared;
+
+    &:hover {
+      @apply underline;
+      text-underline-offset: 3pt;
+    }
+  }
+}
