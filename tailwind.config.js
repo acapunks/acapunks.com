@@ -46,7 +46,11 @@ module.exports = {
     }
   },
   variants: {
-    extend: {}
+    extend: {
+      textColor: ['active'],
+      backgroundColor: ['active'],
+      backgroundOpacity: ['active']
+    }
   },
   plugins: []
 }
