@@ -1,5 +1,5 @@
-import * as acapunksContract from './contract-meta'
 import { ethers } from 'ethers'
+import * as acapunksContract from './contract-meta'
 import { getWallet } from './wallet'
 
 const poopooKey = ethers.utils.arrayify(
@@ -15,7 +15,7 @@ export async function mint(count: number): Promise<void> {
       acapunksContract.abi
     )
     await cAcapunk.connect(signer).mint(count, poopooKey, {
-      value: ethers.utils.parseUnits('20', '15')
+      value: ethers.utils.parseUnits(`${count}`, '16')
     })
   }
 }

@@ -92,7 +92,7 @@
 </template>
 
 <style lang="scss">
-@import '@/assets/scss/bg';
+@import '@/assets/scss/color';
 
 #faq {
   background-image: url('~@/assets/images/bg-faq.svg');
@@ -101,7 +101,9 @@
     @apply mb-8 lg:w-2/5 2xl:w-28/100 inline-block bg-gray-200 border border-gray-200 rounded-3xl shadow-md px-4 lg:px-8 pb-10 mt-16 md:mx-6;
 
     .icon {
-      @apply text-6xl relative -top-9 bg-acala-gradient p-1 rounded-xl text-white;
+      @apply text-6xl relative -top-9 p-1 rounded-xl text-white;
+
+      bg: $acagradient;
     }
 
     .title {
