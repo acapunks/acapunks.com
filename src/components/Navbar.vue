@@ -43,9 +43,7 @@
           </li>
         </ul>
         <div class="lg:ml-8">
-          <button class="border rounded-full w-60 py-3 lg:py-0 my-4 lg:my-0 bg-white bg-opacity-0 hover:bg-opacity-10 h-full" @click="connectToWallet">
-            {{ address ? address.substring(0, 12) : 'Connect To Wallet' }}
-          </button>
+          <wallet-button class="border rounded-full w-60 py-3 lg:py-0 my-4 lg:my-0 bg-white bg-opacity-0 hover:bg-opacity-10 h-full" value="Connect to Wallet" />
         </div>
       </div>
     </div>
@@ -54,39 +52,21 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, onMounted } from 'vue'
-import {
-  addWalletListener,
-  connectToWallet,
-  getCurrentConnectedWallet,
-  isMetaMaskInstalled
-} from '@/store/wallet'
+import { defineComponent, ref } from 'vue'
+import WalletButton from '@/components/WalletButton.vue'
 
 export default defineComponent({
   name: 'Navbar',
-
+  components: {
+    'wallet-button': WalletButton
+  },
   setup() {
     const isHidden = ref(true)
-    const address = ref(undefined as undefined | string)
-
-    async function bindMetaMask(): Promise<void> {
-      if (isMetaMaskInstalled()) {
-        address.value = await getCurrentConnectedWallet()
-        addWalletListener(x => (address.value = x))
-      }
-    }
-
-    onMounted(() => {
-      bindMetaMask()
-    })
-
     return {
       isHidden,
-      address,
       toggleNavbar() {
         isHidden.value = !isHidden.value
-      },
-      connectToWallet
+      }
     }
   }
 })

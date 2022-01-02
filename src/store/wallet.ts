@@ -1,33 +1,41 @@
-declare global {
-  interface Window {
-    ethereum: any
+import { JsonRpcProvider } from '@ethersproject/providers'
+import { ethers } from 'ethers'
+import './metamask'
+
+export async function connectToWallet(): Promise<JsonRpcProvider | undefined> {
+  if (window.ethereum !== undefined) {
+    try {
+      const provider = new ethers.providers.Web3Provider(window.ethereum)
+      // Prompt user for connecting metamask
+      await provider.send('eth_requestAccounts', [])
+      // Require user to change network
+      await provider.send('wallet_switchEthereumChain', [{ chainId: '0x3' }]) // ropsten
+      return provider
+    } catch (e) {
+      // TODO
+    }
   }
 }
 
-const addrContract = '0x0A1e3805af3113Fd9A0E4A6b4f3c6B836a6F387e'
-
-export function isMetaMaskInstalled(): boolean {
-  return typeof window.ethereum !== 'undefined'
-}
-
-export async function connectToWallet(): Promise<void> {
-  if (isMetaMaskInstalled()) {
-    // Prompt users for connecting metamask
-    await window.ethereum.request({ method: 'eth_requestAccounts' })
+export async function getWallet(): Promise<JsonRpcProvider | undefined> {
+  if (window.ethereum !== undefined) {
+    const provider = new ethers.providers.Web3Provider(window.ethereum)
+    return provider
   }
 }
 
-export async function getCurrentConnectedWallet(): Promise<string | undefined> {
-  const addresses: Array<string> = await window.ethereum.request({
-    method: 'eth_accounts'
-  })
-  return addresses[0]
+export async function getWalletAddress(): Promise<string | undefined> {
+  const provider = await getWallet()
+  if (provider !== undefined) {
+    const addresses: string[] = await provider.send('eth_accounts', [])
+    return addresses[0]
+  }
 }
 
-export function addWalletListener(
-  callback: (addr: string | undefined) => void
-): void {
-  window.ethereum.on('accountsChanged', (addresses: string[]) => {
-    callback(addresses[0])
-  })
+export function addWalletListener(callback: (addr?: string) => void): void {
+  if (window.ethereum !== undefined) {
+    window.ethereum.on('accountsChanged', (addresses: string[]) =>
+      callback(addresses[0])
+    )
+  }
 }

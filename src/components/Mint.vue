@@ -3,9 +3,25 @@
     <figure class="shadow-lg">
       <img src="@/assets/images/mint.gif" width="280" height="280">
       <figcaption class="comment text-center bg-white py-6 rounded-bottom">
-        <button class="py-2 px-12 border rounded-full border-acared text-acared hover:text-white hover:bg-acared transition-colors">Mint</button>
+        <button class="py-2 px-12 border rounded-full border-acared text-acared hover:text-white hover:bg-acared transition-colors" @click="onMint">Mint</button>
         <div class="mt-3" style="font-weight: 600">9487 Punks Remaining!</div>
       </figcaption>
     </figure>
   </section>
 </template>
+
+<script lang="ts">
+import { defineComponent } from 'vue'
+import { mint } from '@/store/mint'
+
+export default defineComponent({
+  name: 'Mint',
+  setup() {
+    return {
+      async onMint() {
+        await mint(2)
+      }
+    }
+  }
+})
+</script>
