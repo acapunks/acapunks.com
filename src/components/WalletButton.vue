@@ -8,7 +8,7 @@ import {
   addWalletListener,
   connectToWallet,
   getWalletAddress
-} from '@/store/wallet'
+} from '@/services/wallet'
 
 export default defineComponent({
   name: 'WalletButton',

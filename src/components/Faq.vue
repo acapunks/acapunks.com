@@ -37,8 +37,8 @@
           <h3 class="title">How can I be whitelisted?</h3>
           <p class="answer">
             Active community members that interact with our official
-            <a href="https://twitter.com/acapunks" target="_blank" rel="noopenner noreferrer">twitter</a>
-            and <a href="https://discord.com/acapunks" target="_blank" rel="noopenner noreferrer">discord</a>
+            <a href="https://twitter.com/acapunks" target="_blank" rel="noopener noreferrer">twitter</a>
+            and <a href="https://discord.com/acapunks" target="_blank" rel="noopener noreferrer">discord</a>
             will have a chance to get their Acapunks in stage 1 mint.
           </p>
         </div>
@@ -58,7 +58,7 @@
           <span class="icon"><fa icon="horse-head" /></span>
           <h3 class="title">How can I get an AcaPunk?</h3>
           <p class="answer">
-            First, set up your <a href="https://metamask.io" target="_blank" rel="noopenner noreferrer">Metamask</a>
+            First, set up your <a href="https://metamask.io" target="_blank" rel="noopener noreferrer">Metamask</a>
             wallet. On the mint page, you can connect to your wallet and mint 1 Acapunk for 100 ACA.
             The launching details can be found on the official social media.
           </p>
@@ -68,7 +68,7 @@
           <span class="icon"><fa icon="dove" /></span>
           <h3 class="title">Who is behind the project?</h3>
           <p class="answer">
-            AcaPunks is built by <a href="https://twitter.com/ParachainLabs" target="_blank" rel="noopenner noreferrer">Parachain Labs</a>,
+            AcaPunks is built by <a href="https://twitter.com/ParachainLabs" target="_blank" rel="noopener noreferrer">Parachain Labs</a>,
             a team dedicated to develop NFTs and Dapps on the Polkadot parachains. AcaPunks
             and Parachain Labs are not affiliated with the CryptoPunks or Larva Labs.
           </p>

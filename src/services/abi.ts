@@ -1,6 +1,7 @@
-import { ethers } from 'ethers'
+import { ContractInterface } from 'ethers'
 
-export const abi: ethers.ContractInterface = [
+// https://ropsten.etherscan.io/address/0x351821Ed49F23f884D6B168247Ec36D7732D8BD3#code
+export const abi: ContractInterface = [
   {
     inputs: [
       { internalType: 'string', name: 'name', type: 'string' },

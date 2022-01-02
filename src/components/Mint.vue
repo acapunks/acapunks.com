@@ -12,7 +12,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import { mint } from '@/store/mint'
+import { mint } from '@/services/mint'
 
 export default defineComponent({
   name: 'Mint',
