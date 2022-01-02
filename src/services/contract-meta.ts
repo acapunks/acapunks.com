@@ -336,3 +336,5 @@ export const abi: ContractInterface = [
     type: 'function'
   }
 ]
+
+export const address = '0x351821Ed49F23f884D6B168247Ec36D7732D8BD3'

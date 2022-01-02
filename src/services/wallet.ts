@@ -1,5 +1,5 @@
-import { JsonRpcProvider } from '@ethersproject/providers'
 import { ethers } from 'ethers'
+import { JsonRpcProvider } from '@ethersproject/providers'
 import './metamask'
 
 export async function connectToWallet(): Promise<JsonRpcProvider | undefined> {
