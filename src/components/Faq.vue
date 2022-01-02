@@ -8,7 +8,7 @@
 
       <div class="lg:flex flex-row flex-wrap justify-around">
         <div class="question">
-          <span class="icon"><fa icon="dog" /></span>
+          <span class="icon"><fa icon="fish" /></span>
           <h3 class="title">What are AcaPunks?</h3>
           <p class="answer">
             AcaPunks are 10,000 uniquely generated characters. No two are exactly alike, and
@@ -33,7 +33,7 @@
         </div>
 
         <div class="question">
-          <span class="icon"><fa icon="dog" /></span>
+          <span class="icon"><fa icon="spider" /></span>
           <h3 class="title">How can I be whitelisted?</h3>
           <p class="answer">
             Active community members that interact with our official
@@ -44,7 +44,7 @@
         </div>
 
         <div class="question">
-          <span class="icon"><fa icon="dog" /></span>
+          <span class="icon"><fa icon="cat" /></span>
           <h3 class="title">Where can I trade my AcaPunks?</h3>
           <p class="answer">
             You can trade your AcaPunks directly on the <a href="#">Market Place</a> page. More marketplaces
@@ -55,7 +55,7 @@
         </div>
 
         <div class="question">
-          <span class="icon"><fa icon="dog" /></span>
+          <span class="icon"><fa icon="horse-head" /></span>
           <h3 class="title">How can I get an AcaPunk?</h3>
           <p class="answer">
             First, set up your <a href="https://metamask.io" target="_blank" rel="noopenner noreferrer">Metamask</a>
@@ -65,7 +65,7 @@
         </div>
 
         <div class="question">
-          <span class="icon"><fa icon="dog" /></span>
+          <span class="icon"><fa icon="dove" /></span>
           <h3 class="title">Who is behind the project?</h3>
           <p class="answer">
             AcaPunks is built by <a href="https://twitter.com/ParachainLabs" target="_blank" rel="noopenner noreferrer">Parachain Labs</a>,
@@ -75,7 +75,7 @@
         </div>
 
         <div class="question">
-          <span class="icon"><fa icon="dog" /></span>
+          <span class="icon"><fa icon="robot" /></span>
           <h3 class="title">Roadmap</h3>
           <p class="answer">
             AcaPunks aims to be a long-term community-driven project. We plan to explore ideas such as:
