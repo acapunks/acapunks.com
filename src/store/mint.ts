@@ -1,4 +1,4 @@
-import { ethers, BigNumber } from 'ethers'
+import { ethers } from 'ethers'
 import { getWallet } from './wallet'
 import { abi } from './abi'
 
@@ -13,7 +13,6 @@ export async function mint(count: number): Promise<void> {
     const signer = provider.getSigner()
     const cAcapunk = new ethers.Contract(addrContract, abi)
     await cAcapunk.connect(signer).mint(count, poopooKey, {
-      gasLimit: BigNumber.from('1000000'),
       value: ethers.utils.parseUnits('20', '15')
     })
   }
