@@ -9,4 +9,13 @@ body {
       text-underline-offset: 3pt;
     }
   }
+
+  input,
+  textarea,
+  button,
+  select,
+  a {
+    // https://stackoverflow.com/questions/45049873/how-to-remove-the-blue-highlight-of-button-on-mobile
+    -webkit-tap-highlight-color: transparent;
+  }
 }

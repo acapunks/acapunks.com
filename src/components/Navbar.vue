@@ -27,7 +27,7 @@
         </ul>
       </div>
       <!-- right items -->
-      <div class="lg:self-stretch lg:flex mt-4 lg:mt-0 border-t lg:border-t-0 pt-4 lg:pt-0">
+      <div class="lg:self-stretch lg:flex mt-4 lg:mt-0 border-t lg:border-t-0 pt-4 lg:pt-0" style="border-top-color: rgba(255,255,255,.7);">
         <ul class="text-left self-stretch justify-end lg:flex space-y-2 lg:space-y-0 items-center lg:space-x-3 text-opacity-70 hover:text-opacity-100">
           <li>
             <a href="https://twitter.com/acapunks" target="_blank" rel="noopener noreferrer" class="nav-link">
