@@ -1,10 +1,10 @@
 <template>
-  <nav class="lg:flex px-3 py-3 shadow-md bg-acared text-white">
+  <nav id="navbar" class="lg:flex px-3 py-3 shadow-md bg-acared text-white">
 
     <div class="self-stretch flex items-center justify-between">
       <!-- logo -->
       <div class="self-stretch flex items-center mr-4">
-        <router-link to="/" class="inline-flex items-center"><img src="@/assets/images/brand.svg" width="48" height="48" class="mr-2">Acapunks</router-link>
+        <router-link to="/" class="inline-flex items-center nav-link"><img src="@/assets/images/brand.svg" width="48" height="48" class="mr-2">Acapunks</router-link>
       </div>
 
       <!-- navbar button; visible only in mobile -->
@@ -17,26 +17,26 @@
       <!-- left items -->
       <div class="lg:self-stretch lg:flex mt-4 lg:mt-0 ">
         <ul class="text-left self-stretch lg:flex items-center space-y-2 lg:space-y-0 lg:space-x-3">
-          <li><router-link to="/#mint" class="text-white text-opacity-70 hover:text-opacity-100">Mint</router-link></li>
-          <li><router-link to="/#faq" class="text-white text-opacity-70 hover:text-opacity-100">FAQ</router-link></li>
+          <li><router-link to="/#mint" class="nav-link">Mint</router-link></li>
+          <li><router-link to="/#faq" class="nav-link">FAQ</router-link></li>
           <!--
-          <li><a href="#" class="text-white text-opacity-70 hover:text-opacity-100">View my Punks</a></li>
-          <li><a href="#" class="text-white text-opacity-70 hover:text-opacity-100">Market Place</a></li>
+          <li><a href="#">View my Punks</a></li>
+          <li><a href="#">Market Place</a></li>
           -->
-          <li><router-link to="/terms-and-condition" class="text-white text-opacity-70 hover:text-opacity-100">Terms and Condition</router-link></li>
+          <li><router-link to="/terms-and-condition" class="nav-link">Terms and Condition</router-link></li>
         </ul>
       </div>
       <!-- right items -->
       <div class="lg:self-stretch lg:flex mt-4 lg:mt-0 border-t lg:border-t-0 pt-4 lg:pt-0">
         <ul class="text-left self-stretch justify-end lg:flex space-y-2 lg:space-y-0 items-center lg:space-x-3 text-opacity-70 hover:text-opacity-100">
           <li>
-            <a href="https://twitter.com/acapunks" target="_blank" rel="noopener noreferrer" class="text-white text-opacity-70 hover:text-opacity-100">
+            <a href="https://twitter.com/acapunks" target="_blank" rel="noopener noreferrer" class="nav-link">
               <span class="inline-block text-center" style="width: 2em"><fa :icon="['fab', 'twitter']" class="mr-1" /></span>
               <span class="lg:hidden xl:inline">Twitter</span>
             </a>
           </li>
           <li>
-            <a href="https://discord.com/acapunks" target="_blank" rel="noopener noreferrer" class="text-white text-opacity-70 hover:text-opacity-100">
+            <a href="https://discord.com/acapunks" target="_blank" rel="noopener noreferrer" class="nav-link">
               <span class="inline-block text-center" style="width: 2em"><fa :icon="['fab', 'discord']" class="mr-1" /></span>
               <span class="lg:hidden xl:inline">Discord</span>
             </a>
@@ -71,3 +71,16 @@ export default defineComponent({
   }
 })
 </script>
+
+<style lang="scss">
+#navbar {
+  .nav-link {
+    @apply text-white text-opacity-70;
+
+    &:hover {
+      @apply text-opacity-100;
+      text-decoration: none;
+    }
+  }
+}
+</style>
