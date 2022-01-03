@@ -1,5 +1,5 @@
 <template>
-  <mint id="mint" />
+  <mint id="mint" class="flex-grow" />
   <faq id="faq" />
 </template>
 
