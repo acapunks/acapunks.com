@@ -2,7 +2,7 @@
   <navbar class="fixed top-0 right-0 left-0 z-50" />
 
   <div class="flex flex-col min-h-screen" style="padding-top: 72px">
-    <main class="flex-grow flex flex-col">
+    <main class="grow flex flex-col">
       <router-view />
     </main>
 
@@ -19,18 +19,9 @@
   </popup>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue'
+<script setup lang="ts">
 import Navbar from '@/components/Navbar.vue'
 import Popup from '@/components/Popup.vue'
-
-export default defineComponent({
-  name: 'App',
-  components: {
-    navbar: Navbar,
-    popup: Popup
-  }
-})
 </script>
 
 <style lang="scss">

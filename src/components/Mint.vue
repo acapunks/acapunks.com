@@ -13,22 +13,15 @@
   </section>
 </template>
 
-<script lang="ts">
-import { defineComponent, ref } from 'vue'
+<script setup lang="ts">
+import { ref } from 'vue'
 import { mint } from '@/services/mint'
 
-export default defineComponent({
-  name: 'Mint',
-  setup() {
-    const mintCount = ref(1)
-    return {
-      mintCount,
-      async onMint() {
-        await mint(mintCount.value)
-      }
-    }
-  }
-})
+const mintCount = ref(1)
+
+async function onMint() {
+  await mint(mintCount.value)
+}
 </script>
 
 <style lang="scss">

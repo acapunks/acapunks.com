@@ -1,22 +1,22 @@
-import { createApp } from 'vue'
-import App from './App.vue'
-import router from './router'
-import store from './store'
+import App from '@/App.vue'
 import '@/assets/css/tailwind.css'
 import '@/assets/scss/main.scss'
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import router from './router'
+import store from './store'
 import { library } from '@fortawesome/fontawesome-svg-core'
+import { faDiscord, faTwitter } from '@fortawesome/free-brands-svg-icons'
 import {
   faBars,
-  faDog,
   faCat,
+  faDog,
   faDove,
-  faSpider,
-  faHorseHead,
   faFish,
-  faRobot
+  faHorseHead,
+  faRobot,
+  faSpider
 } from '@fortawesome/free-solid-svg-icons'
-import { faTwitter, faDiscord } from '@fortawesome/free-brands-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import { createApp } from 'vue'
 
 library.add(
   faTwitter,

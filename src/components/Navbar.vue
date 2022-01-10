@@ -13,7 +13,7 @@
       </button>
     </div>
 
-    <div class="flex-grow self-stretch flex-col lg:flex-row justify-between overflow-hidden transition-transform" :class="[ { 'hidden': isHidden }, 'lg:flex']">
+    <div class="grow self-stretch flex-col lg:flex-row justify-between overflow-hidden transition-transform" :class="[ { 'hidden': isHidden }, 'lg:flex']">
       <!-- left items -->
       <div class="lg:self-stretch lg:flex mt-4 lg:mt-0 ">
         <ul class="text-left self-stretch lg:flex items-center space-y-2 lg:space-y-0 lg:space-x-3">
@@ -51,25 +51,14 @@
   </nav>
 </template>
 
-<script lang="ts">
-import { defineComponent, ref } from 'vue'
+<script setup lang="ts">
+import { ref } from 'vue'
 import WalletButton from '@/components/WalletButton.vue'
 
-export default defineComponent({
-  name: 'Navbar',
-  components: {
-    'wallet-button': WalletButton
-  },
-  setup() {
-    const isHidden = ref(true)
-    return {
-      isHidden,
-      toggleNavbar() {
-        isHidden.value = !isHidden.value
-      }
-    }
-  }
-})
+const isHidden = ref(true)
+function toggleNavbar() {
+  isHidden.value = !isHidden.value
+}
 </script>
 
 <style lang="scss">

@@ -1,18 +1,9 @@
 <template>
-  <mint id="mint" class="flex-grow" />
+  <mint id="mint" class="grow" />
   <faq id="faq" />
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue'
+<script setup lang="ts">
 import Mint from '@/components/Mint.vue'
 import Faq from '@/components/Faq.vue'
-
-export default defineComponent({
-  name: 'Home',
-  components: {
-    mint: Mint,
-    faq: Faq
-  }
-})
 </script>
