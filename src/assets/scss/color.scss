@@ -9,6 +9,13 @@ $acagradient: linear-gradient(
   $acaorange 79.87%
 );
 
+$acagradient-reverse: linear-gradient(
+  148.08deg,
+  $acapurple -40.69%,
+  $acared 36.17%,
+  $acaorange 79.87%
+);
+
 $acagradient-light: linear-gradient(
   328.08deg,
   rgba($acapurple, 0.5) -40.69%,

@@ -1,0 +1,78 @@
+<template>
+  <section id="landing" class="w-100 h-screen-no-navbar lg:flex items-center">
+    <div class="lg:container lg:mx-auto lg:flex lg:items-center px-4">
+      <div class="lg:w-2/3 pt-12">
+        <h1 class="text-transparent text-4xl lg:text-7xl font-black leading-tight mb-6">AcaPunks</h1>
+        <h2 class="text-gray-50 text-xl lg:text-4xl leading-relaxed">Your virtual identity on the Acala Network</h2>
+      </div>
+      <div class="grow flex justify-center items-center py-24">
+        <figure class="shadow-lg">
+          <img src="@/assets/images/mint.gif" width="280" height="280" class="shadow" />
+          <figcaption class="bg-white rounded-bottom">
+            <div class="py-6 flex flex-col items-center bg-gray-50" style="box-shadow: inset 0px 4px 4px -4px #AAA, inset 0px -4px 4px -4px #AAA">
+              <input v-model="mintCount" type="range" min="1" max="10" class="mint-bar mb-3 w-full block" style="width: 80%" />
+              <button class="block w-full py-2 border rounded-full border-acared text-acared active:text-white hover:shadow active:bg-acared active-bg-opacity-1 transition-colors disabled:opacity-50 disabled:text-acared disabled:bg-inherit disabled:shadow-none" style="width: 60%" @click="onMint" :disabled="minting">
+                <span v-if="minting">Minting...</span>
+                <span v-else>
+                  Mint
+                  <span class="inline-block text-right" style="width: 1em">{{ mintCount }}</span>
+                </span>
+              </button>
+            </div>
+            <div class="text-center py-6" style="font-weight: 600">
+              <span v-if="remNftCount === undefined">Loading...</span>
+              <span v-else-if="remNftCount > 0">{{ remNftCount }} Punks Remaining!</span>
+              <span v-else>Sold Out!</span>
+            </div>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+</template>
+
+<script setup lang="ts">
+import { onMounted, ref } from 'vue'
+import { mint, getRemainingNftCount, onNftSold } from '@/services/nft'
+
+const mintCount = ref(1)
+const minting = ref(false)
+const remNftCount = ref(undefined as undefined | number)
+async function onMint() {
+  // start mint
+  const fb = await mint(mintCount.value)
+  // minting
+  minting.value = true
+  await fb()
+  // minted
+  minting.value = false
+}
+
+onMounted(() => {
+  // load remaining nft count
+  getRemainingNftCount().then(x => remNftCount.value = x)
+  // register listener
+  onNftSold(() => remNftCount.value!--)
+})
+</script>
+
+<style lang="scss">
+@import "@/assets/scss/color";
+
+#landing {
+  background: $acagradient-light;
+  min-height: calc(100vh - 72px);
+
+  h1 {
+    background: $acagradient-reverse;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(2px 2px rgba(0, 0, 0, 0.3));
+  }
+
+  h2 {
+    filter: drop-shadow(2px 2px rgba(0, 0, 0, 0.3));
+  }
+}
+</style>
