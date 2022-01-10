@@ -10,7 +10,10 @@ export async function connectToWallet(): Promise<JsonRpcProvider | undefined> {
       // Prompt user for connecting metamask
       await provider.send('eth_requestAccounts', [])
       // Require user to change network
-      await provider.send('wallet_switchEthereumChain', [acapunks.network]) // ropsten
+      await provider.send(
+        'wallet_switchEthereumChain',
+        acapunks.metamaskNetwork
+      ) // ropsten
       return provider
     } catch (e) {
       // TODO

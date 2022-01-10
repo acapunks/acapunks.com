@@ -66,9 +66,7 @@ import { ref } from 'vue'
 import WalletButton from '@/components/WalletButton.vue'
 
 const isHidden = ref(true)
-function toggleNavbar() {
-  isHidden.value = !isHidden.value
-}
+const toggleNavbar = () => isHidden.value = !isHidden.value
 </script>
 
 <style lang="scss">
