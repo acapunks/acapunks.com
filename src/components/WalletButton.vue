@@ -16,6 +16,6 @@ async function bindMetaMask(): Promise<void> {
   addWalletListener(x => (address.value = x))
 }
 
-defineProps<{ value: { type: String, required: true } }>()
+defineProps<{ value: string }>()
 onMounted(() => bindMetaMask())
 </script>
