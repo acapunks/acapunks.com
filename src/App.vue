@@ -1,5 +1,5 @@
 <template>
-  <navbar class="fixed top-0 right-0 left-0 z-50" />
+  <navbar class="fixed top-0 right-0 left-0 z-10" />
 
   <div class="flex flex-col min-h-screen" style="padding-top: 72px">
     <main class="grow flex flex-col">

@@ -1,5 +1,5 @@
 <template>
-  <section id="landing" class="w-100 h-screen-no-navbar lg:flex items-center">
+  <section scroll="no" id="landing" class="w-100 h-screen-no-navbar lg:flex items-center">
     <div class="lg:container lg:mx-auto lg:flex lg:items-center px-4">
       <div class="lg:w-2/3 pt-12">
         <h1 class="text-transparent text-4xl lg:text-7xl font-black leading-tight mb-6">AcaPunks</h1>
@@ -29,12 +29,22 @@
       </div>
     </div>
   </section>
+
+  <div v-if="minting" id="page-mask" class="fixed top-0 bottom-0 left-0 right-0 bg-black bg-opacity-80 z-20">
+    <div id="mint-loading" class="w-full h-full flex flex-col justify-center text-center">
+      <spinner />
+      <h3 class="mt-6 text-3xl font-bold text-gray-50">
+        <span>Minting...</span>
+      </h3>
+    </div>
+  </div>
 </template>
 
 <script setup lang="ts">
 import { onMounted, ref } from 'vue'
 import { mint, getRemainingNftCount, onNftSold } from '@/services/nft'
-import { disconnected, invalidChain, addWalletListener } from '@/services/wallet'
+import { addWalletListener } from '@/services/wallet'
+import Spinner from '@/components/Spinner.vue'
 
 const mintCount = ref(1)
 const mintable = ref(false)
@@ -77,6 +87,17 @@ onMounted(() => {
 
   h2 {
     filter: drop-shadow(2px 2px rgba(0, 0, 0, 0.3));
+  }
+}
+
+#mint-loading {
+  h3 {
+    span {
+      background: $acagradient;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
   }
 }
 </style>
