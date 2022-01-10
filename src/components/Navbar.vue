@@ -54,7 +54,7 @@
           </li>
         </ul>
         <div class="lg:ml-8">
-          <wallet-button class="border rounded-full w-60 py-3 lg:py-0 my-4 lg:my-0 bg-white bg-opacity-0 hover:bg-opacity-10 h-full" value="Connect to Wallet" />
+          <wallet-button class="border rounded-full w-60 py-3 lg:py-0 my-4 lg:my-0 bg-white bg-opacity-0 hover:bg-opacity-10 h-full" connect-hint="Connect to Wallet" switch-hint="Switch Network" />
         </div>
       </div>
     </div>

@@ -7,12 +7,8 @@ const poopooKey = ethers.utils.arrayify(
 )
 
 export async function mint(count: number): Promise<() => Promise<void>> {
-  const provider = await getWallet()
-  if (provider === undefined) {
-    throw '' // no metamask logged in
-  }
-
-  const signer = provider.getSigner()
+  const provider = getWallet() as ethers.providers.JsonRpcProvider
+  const signer = provider!.getSigner()
   const myAddr = await signer.getAddress()
   const ctrAca = new ethers.Contract(acapunks.address, acapunks.abi)
   // https://docs.ethers.io/v5/api/contract/contract/#Contract--readonly
