@@ -1,6 +1,7 @@
 import { ethers } from 'ethers'
-import { JsonRpcProvider } from '@ethersproject/providers'
+import { JsonRpcProvider, Provider } from '@ethersproject/providers'
 import './metamask'
+import * as acapunks from './contract-meta'
 
 export async function connectToWallet(): Promise<JsonRpcProvider | undefined> {
   if (window.ethereum !== undefined) {
@@ -9,7 +10,7 @@ export async function connectToWallet(): Promise<JsonRpcProvider | undefined> {
       // Prompt user for connecting metamask
       await provider.send('eth_requestAccounts', [])
       // Require user to change network
-      await provider.send('wallet_switchEthereumChain', [{ chainId: '0x3' }]) // ropsten
+      await provider.send('wallet_switchEthereumChain', [acapunks.network]) // ropsten
       return provider
     } catch (e) {
       // TODO
@@ -38,4 +39,12 @@ export function addWalletListener(callback: (addr?: string) => void): void {
       callback(addresses[0])
     )
   }
+}
+
+let defaultProvider: null | Provider = null
+export function getAnonymousProvider(): Provider {
+  if (!defaultProvider) {
+    defaultProvider = ethers.getDefaultProvider(acapunks.network)
+  }
+  return defaultProvider
 }

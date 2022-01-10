@@ -1,4 +1,5 @@
 import { ContractInterface } from 'ethers'
+import { Networkish } from '@ethersproject/networks'
 
 // https://ropsten.etherscan.io/address/0x351821Ed49F23f884D6B168247Ec36D7732D8BD3#code
 export const abi: ContractInterface = [
@@ -338,3 +339,5 @@ export const abi: ContractInterface = [
 ]
 
 export const address = '0x351821Ed49F23f884D6B168247Ec36D7732D8BD3'
+export const totalNftCount = 10000
+export const network: Networkish = 'ropsten'

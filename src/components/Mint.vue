@@ -13,26 +13,39 @@
             </span>
           </button>
         </div>
-        <div class="text-center py-6" style="font-weight: 600">9487 Punks Remaining!</div>
+        <div class="text-center py-6" style="font-weight: 600">
+          <span v-if="remNftCount === undefined">Loading...</span>
+          <span v-else-if="remNftCount > 0">{{ remNftCount }} Punks Remaining!</span>
+          <span v-else>Sold Out!</span>
+        </div>
       </figcaption>
     </figure>
   </section>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
-import { mint } from '@/services/mint'
+import { onMounted, ref } from 'vue'
+import { mint, getRemainingNftCount, onNftSold } from '@/services/nft'
 
 const mintCount = ref(1)
 const minting = ref(false)
+const remNftCount = ref(undefined as undefined | number)
 async function onMint() {
+  // start mint
   const fb = await mint(mintCount.value)
-  // Now minting
+  // minting
   minting.value = true
   await fb()
-  // Now minted
+  // minted
   minting.value = false
 }
+
+onMounted(() => {
+  // load remaining nft count
+  getRemainingNftCount().then(x => remNftCount.value = x)
+  // register listener
+  onNftSold(() => remNftCount.value!--)
+})
 </script>
 
 <style lang="scss">
