@@ -11,7 +11,7 @@
           <figcaption class="bg-white rounded-bottom">
             <div class="py-6 flex flex-col items-center bg-gray-50" style="box-shadow: inset 0px 4px 4px -4px #AAA, inset 0px -4px 4px -4px #AAA">
               <input v-model="mintCount" type="range" min="1" max="10" class="mint-bar mb-3 w-full block" style="width: 80%" />
-              <button class="block w-full py-2 border rounded-full border-acared text-acared active:text-white hover:shadow active:bg-acared active-bg-opacity-1 transition-colors disabled:opacity-50 disabled:text-acared disabled:bg-inherit disabled:shadow-none" style="width: 60%" @click="onMint" :disabled="minting">
+              <button class="block w-full py-2 border rounded-full border-acared text-acared active:text-white hover:shadow active:bg-acared active-bg-opacity-1 transition-colors disabled:opacity-50 disabled:text-acared disabled:bg-inherit disabled:shadow-none" style="width: 60%" @click="onMint" :disabled="!mintable || minting">
                 <span v-if="minting">Minting...</span>
                 <span v-else>
                   Mint
@@ -34,10 +34,13 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue'
 import { mint, getRemainingNftCount, onNftSold } from '@/services/nft'
+import { disconnected, invalidChain, addWalletListener } from '@/services/wallet'
 
 const mintCount = ref(1)
+const mintable = ref(false)
 const minting = ref(false)
 const remNftCount = ref(undefined as undefined | number)
+
 async function onMint() {
   // start mint
   const fb = await mint(mintCount.value)
@@ -52,6 +55,7 @@ onMounted(() => {
   // load remaining nft count
   getRemainingNftCount().then(x => remNftCount.value = x)
   // register listener
+  addWalletListener(addr => mintable.value = (typeof addr === 'string'))
   onNftSold(() => remNftCount.value!--)
 })
 </script>

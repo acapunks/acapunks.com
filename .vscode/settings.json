@@ -13,6 +13,7 @@
         "ethersproject",
         "fontawesome",
         "fortawesome",
+        "mintable",
         "Networkish",
         "parachain",
         "parachains",
