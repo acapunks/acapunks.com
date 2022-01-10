@@ -1,8 +1,5 @@
 {
     "editor.tabSize": 2,
-    "files.associations": {
-        "*.scss": "postcss"
-    },
     "cSpell.words": [
         "acagradient",
         "acala",
@@ -21,14 +18,5 @@
         "Roboto",
         "Segoe"
     ],
-    "typescript.extension.sortImports.pathSortOrder": [
-        "package",
-        "relativeUpLevel",
-        "relativeDownLevel"
-    ],
-    "typescript.extension.sortImports.sortMethod": "path",
-    "typescript.extension.sortImports.maxLineLength": 80,
-    "typescript.extension.sortImports.omitSemicolon": true,
-    "omnisharp.organizeImportsOnFormat": true,
-    "volar.completion.preferredTagNameCase": "kebab"
+    "css.validate": false
 }

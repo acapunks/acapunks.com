@@ -8,7 +8,9 @@
 
       <div class="lg:flex flex-row flex-wrap justify-around">
         <div class="question">
-          <span class="icon"><fa icon="fish" /></span>
+          <span class="icon">
+            <fa icon="fish" />
+          </span>
           <h3 class="title">What are AcaPunks?</h3>
           <p class="answer">
             AcaPunks are 10,000 uniquely generated characters. No two are exactly alike, and
@@ -18,7 +20,9 @@
         </div>
 
         <div class="question">
-          <span class="icon"><fa icon="dog" /></span>
+          <span class="icon">
+            <fa icon="dog" />
+          </span>
           <h3 class="title">How will Acapunks launch?</h3>
           <p class="answer">
             Once the Acala EVM+ come online, we will deploy the smart contract ASAP. This is
@@ -33,21 +37,27 @@
         </div>
 
         <div class="question">
-          <span class="icon"><fa icon="spider" /></span>
+          <span class="icon">
+            <fa icon="spider" />
+          </span>
           <h3 class="title">How can I be whitelisted?</h3>
           <p class="answer">
             Active community members that interact with our official
             <a href="https://twitter.com/acapunks" target="_blank" rel="noopener noreferrer">twitter</a>
-            and <a href="https://discord.com/acapunks" target="_blank" rel="noopener noreferrer">discord</a>
+            and
+            <a href="https://discord.com/acapunks" target="_blank" rel="noopener noreferrer">discord</a>
             will have a chance to get their Acapunks in stage 1 mint.
           </p>
         </div>
 
         <div class="question">
-          <span class="icon"><fa icon="cat" /></span>
+          <span class="icon">
+            <fa icon="cat" />
+          </span>
           <h3 class="title">Where can I trade my AcaPunks?</h3>
           <p class="answer">
-            You can trade your AcaPunks directly on the <a href="#">Market Place</a> page. More marketplaces
+            You can trade your AcaPunks directly on the
+            <a href="#">Market Place</a> page. More marketplaces
             will be supported after the minting stage is completed. Ww also plan to launch
             Acalart — a marketplace where you can view and trade any NFTs on the Acala Network.
             Stay tuned.
@@ -55,27 +65,35 @@
         </div>
 
         <div class="question">
-          <span class="icon"><fa icon="horse-head" /></span>
+          <span class="icon">
+            <fa icon="horse-head" />
+          </span>
           <h3 class="title">How can I get an AcaPunk?</h3>
           <p class="answer">
-            First, set up your <a href="https://metamask.io" target="_blank" rel="noopener noreferrer">Metamask</a>
+            First, set up your
+            <a href="https://metamask.io" target="_blank" rel="noopener noreferrer">Metamask</a>
             wallet. On the mint page, you can connect to your wallet and mint 1 Acapunk for 100 ACA.
             The launching details can be found on the official social media.
           </p>
         </div>
 
         <div class="question">
-          <span class="icon"><fa icon="dove" /></span>
+          <span class="icon">
+            <fa icon="dove" />
+          </span>
           <h3 class="title">Who is behind the project?</h3>
           <p class="answer">
-            AcaPunks is built by <a href="https://twitter.com/ParachainLabs" target="_blank" rel="noopener noreferrer">Parachain Labs</a>,
+            AcaPunks is built by
+            <a href="https://twitter.com/ParachainLabs" target="_blank" rel="noopener noreferrer">Parachain Labs</a>,
             a team dedicated to develop NFTs and Dapps on the Polkadot parachains. AcaPunks
             and Parachain Labs are not affiliated with the CryptoPunks or Larva Labs.
           </p>
         </div>
 
         <div class="question">
-          <span class="icon"><fa icon="robot" /></span>
+          <span class="icon">
+            <fa icon="robot" />
+          </span>
           <h3 class="title">Roadmap</h3>
           <p class="answer">
             AcaPunks aims to be a long-term community-driven project. We plan to explore ideas such as:
@@ -86,16 +104,15 @@
           </p>
         </div>
       </div>
-
     </div>
   </section>
 </template>
 
 <style lang="scss">
-@import '@/assets/scss/color';
+@import "@/assets/scss/color";
 
 #faq {
-  background-image: url('@/assets/images/bg-faq.svg');
+  background-image: url("@/assets/images/bg-faq.svg");
 
   .question {
     @apply relative mb-8 lg:w-2/5 2xl:w-28/100 inline-block bg-gray-200 border border-gray-200 rounded-3xl shadow-md px-4 lg:px-8 pb-10 mt-16 md:mx-6;
