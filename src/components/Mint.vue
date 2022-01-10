@@ -5,9 +5,12 @@
       <figcaption class="bg-white rounded-bottom">
         <div class="py-6 flex flex-col items-center bg-gray-50" style="box-shadow: inset 0px 4px 4px -4px #AAA, inset 0px -4px 4px -4px #AAA">
           <input v-model="mintCount" type="range" min="1" max="10" class="mint-bar mb-3 w-full block" style="width: 80%" />
-          <button class="block w-full py-2 border rounded-full border-acared text-acared active:text-white hover:shadow active:bg-acared active-bg-opacity-1 transition-colors" style="width: 60%" @click="onMint">
-            Mint
-            <span class="inline-block text-right" style="width: 1em">{{ mintCount }}</span>
+          <button class="block w-full py-2 border rounded-full border-acared text-acared active:text-white hover:shadow active:bg-acared active-bg-opacity-1 transition-colors disabled:opacity-50 disabled:text-acared disabled:bg-inherit disabled:shadow-none" style="width: 60%" @click="onMint" :disabled="minting">
+            <span v-if="minting">Minting...</span>
+            <span v-else>
+              Mint
+              <span class="inline-block text-right" style="width: 1em">{{ mintCount }}</span>
+            </span>
           </button>
         </div>
         <div class="text-center py-6" style="font-weight: 600">9487 Punks Remaining!</div>
@@ -21,9 +24,14 @@ import { ref } from 'vue'
 import { mint } from '@/services/mint'
 
 const mintCount = ref(1)
-
+const minting = ref(false)
 async function onMint() {
-  await mint(mintCount.value)
+  const fb = await mint(mintCount.value)
+  // Now minting
+  minting.value = true
+  await fb()
+  // Now minted
+  minting.value = false
 }
 </script>
 
