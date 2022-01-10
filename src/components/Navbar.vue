@@ -19,7 +19,7 @@
       <div class="lg:self-stretch lg:flex mt-4 lg:mt-0">
         <ul class="text-left self-stretch lg:flex items-center space-y-2 lg:space-y-0 lg:space-x-3">
           <li>
-            <router-link to="/#mint" class="nav-link">Mint</router-link>
+            <router-link to="/#landing" class="nav-link">Mint</router-link>
           </li>
           <li>
             <router-link to="/#faq" class="nav-link">FAQ</router-link>
