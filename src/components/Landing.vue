@@ -9,7 +9,7 @@
         </h2>
       </div>
       <div class="lg:grow flex justify-center items-center">
-        <carousel :slides="demoSlides" class="-mt-12 -mb-12 md:my-0 md:mt-12 lg:mt-0" />
+        <carousel :slides="demoSlides" class="-mt-6 -mb-6 md:my-0 md:mt-12 lg:mt-0" />
       </div>
     </div>
   </section>
