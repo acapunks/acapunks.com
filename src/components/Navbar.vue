@@ -33,7 +33,7 @@
           <li><a href="#">Market Place</a></li>
           -->
           <li>
-            <router-link to="/terms-and-condition" class="nav-link">Terms & Condition</router-link>
+            <router-link to="/terms-and-conditions" class="nav-link">Terms & Condition</router-link>
           </li>
         </ul>
       </div>
@@ -49,7 +49,7 @@
             </a>
           </li>
           <li>
-            <a href="https://discord.com/acapunks" target="_blank" rel="noopener noreferrer" class="nav-link">
+            <a href="#" target="_blank" rel="noopener noreferrer" class="nav-link">
               <span class="inline-block text-center" style="width: 2em">
                 <fa :icon="['fab', 'discord']" class="mr-1" />
               </span>
