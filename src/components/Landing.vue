@@ -1,15 +1,15 @@
 <template>
-  <section scroll="no" id="landing" class="flex flex-col items-stretch lg:flex-row lg:items-center">
+  <section scroll="no" id="landing" class="flex flex-col items-stretch lg:flex-row lg:items-center py-10">
     <div class="lg:container lg:mx-auto grow flex flex-col lg:flex-row justify-center lg:items-center px-4">
       <div class="lg:w-1/3 lg:mb-0 lg:mr-24">
-        <h1 class="text-transparent text-4xl lg:text-7xl font-black leading-tight mb-2">AcaPunks</h1>
-        <h2 class="text-gray-50 text-xl lg:text-4xl leading-relaxed">
+        <h1 class="text-transparent text-4xl lg:text-7xl font-black mb-3">AcaPunks</h1>
+        <h2 class="text-gray-50 md:text-xl lg:text-2xl">
           10,000 uniquely generated punks living on the Acala Network
           <br />Join the club and explore the Acala universe together
         </h2>
       </div>
       <div class="lg:grow flex justify-center items-center">
-        <carousel :slides="demoSlides" />
+        <carousel :slides="demoSlides" class="-mt-12 -mb-12 md:my-0 md:mt-12 lg:mt-0" />
       </div>
     </div>
   </section>
@@ -25,7 +25,6 @@ const demoSlides = Array.from({ length: 5 }, (_, i) => i + 1).map(i => ({ source
 
 #landing {
   background: $aca-gradient-light;
-  min-height: calc(100vh - 72px);
 
   h1 {
     background: $aca-gradient-reverse;

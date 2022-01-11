@@ -1,7 +1,7 @@
 <template>
-  <landing class="w-100 min-h-screen" />
-  <mint class="w-100 min-h-screen" />
-  <faq class="w-100 min-h-screen" />
+  <landing class="w-100 h-screen-no-navbar" />
+  <mint class="w-100 h-screen-no-navbar" />
+  <faq class="w-100 min-h-screen-no-navbar" />
 </template>
 
 <script setup lang="ts">

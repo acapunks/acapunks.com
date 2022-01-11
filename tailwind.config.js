@@ -16,10 +16,16 @@ module.exports = {
       width: {
         '28/100': '28%'
       },
+      height: {
+        'screen-no-navbar': 'calc(100vh - 72px)'
+      },
       minWidth: {
         '1/4': '25vw',
         '1/3': '33vw',
         '1/2': '50vw'
+      },
+      minHeight: {
+        'screen-no-navbar': 'calc(100vh - 72px)'
       },
       maxWidth: {
         '1/4': '25vw',
