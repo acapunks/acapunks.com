@@ -17,6 +17,6 @@ import Carousel from '@/components/Carousel.vue'
 @import "@/assets/scss/color";
 
 #my-punks {
-  background: $acagradient-light;
+  background: $aca-gradient-light;
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <section id="faq" class="text-center py-24">
+  <section id="faq" class="text-center py-24 bg-[#f0f1f5]">
     <div class="container mx-auto px-4">
       <div class="mb-8">
         <h2 class="text-4xl mb-6 text-gray-700 font-black">FAQ</h2>
@@ -115,7 +115,7 @@
   background-image: url("@/assets/images/bg-faq.svg");
 
   .question {
-    @apply relative mb-8 lg:w-2/5 2xl:w-28/100 inline-block bg-gray-200 border border-gray-200 rounded-3xl shadow-md px-4 lg:px-8 pb-10 mt-16 md:mx-6;
+    @apply relative mb-8 lg:w-2/5 2xl:w-28/100 inline-block bg-white border border-gray-200 rounded-3xl shadow-md px-4 lg:px-8 pb-10 mt-16 md:mx-6;
 
     padding-top: 42px;
 
@@ -125,7 +125,7 @@
       top: -42px;
       width: 80px;
       height: 84px;
-      background: $acagradient;
+      background: $aca-gradient;
     }
 
     .title {

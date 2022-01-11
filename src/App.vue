@@ -7,7 +7,7 @@
     </main>
 
     <!-- footer -->
-    <footer class="py-3 bg-gray-200 text-center">
+    <footer class="py-3 bg-[#f2f2f2] text-center">
       <span class="relative" style="top: 0.13em; font-size:1.05em; ">Powered By </span>
       <a target="_blank" href="https://acala.network" rel="noopener noreferrer"><img src="@/assets/images/acala.svg" class="h-9 inline-block"></a>
     </footer>

@@ -1,9 +1,9 @@
 <template>
-  <nav id="navbar" class="lg:flex px-3 py-3 shadow-md bg-acared text-white">
+  <nav id="navbar" class="lg:flex px-3 py-3 shadow-md bg-aca-red text-white">
     <div class="self-stretch flex items-center justify-between">
       <!-- logo -->
       <div class="self-stretch flex items-center mr-8">
-        <router-link to="/" class="inline-flex items-center nav-link">
+        <router-link to="/#landing" class="inline-flex items-center nav-link">
           <img src="@/assets/images/brand.svg" width="48" height="48" class="mr-2" />Acapunks
         </router-link>
       </div>
@@ -19,7 +19,7 @@
       <div class="lg:self-stretch lg:flex mt-4 lg:mt-0">
         <ul class="text-left self-stretch lg:flex items-center space-y-2 lg:space-y-0 lg:space-x-8">
           <li>
-            <router-link to="/#landing" class="nav-link">Mint</router-link>
+            <router-link to="/#mint" class="nav-link">Mint</router-link>
           </li>
           <li>
             <router-link to="/#faq" class="nav-link">FAQ</router-link>

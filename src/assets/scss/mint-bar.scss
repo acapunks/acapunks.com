@@ -12,7 +12,7 @@ input.mint-bar {
     &::-ms-fill-lower,
     &::-ms-fill-upper,
     &::-webkit-slider-runnable-track {  
-      background: $acagradient;
+      background: $aca-gradient;
     }
   }
 
@@ -22,7 +22,7 @@ input.mint-bar {
     cursor: pointer;
     animate: 0.2s;
     box-shadow: 1px 1px 2px #a6a6a6;
-    background: $acagradient;
+    background: $aca-gradient;
     border-radius: 0px;
     border: 0;
   }
@@ -33,7 +33,7 @@ input.mint-bar {
     height: 36px;
     width: 15px;
     border-radius: 0px;
-    background: $acared;
+    background: $aca-red;
     cursor: pointer;
     -webkit-appearance: none;
     margin-top: -16px;
@@ -45,7 +45,7 @@ input.mint-bar {
     cursor: pointer;
     animate: 0.2s;
     box-shadow: 1px 1px 2px #a6a6a6;
-    background: $acagradient;
+    background: $aca-gradient;
     border-radius: 0px;
     border: 0;
   }
@@ -55,7 +55,7 @@ input.mint-bar {
     border: 0;
     height: 36px;
     width: 15px;
-    background: $acared;
+    background: $aca-red;
     cursor: pointer;
   }
 
@@ -70,13 +70,13 @@ input.mint-bar {
   }
 
   &::-ms-fill-lower {
-    background: $acagradient;
+    background: $aca-gradient;
     border: 0;
     box-shadow: 1px 1px 2px #a6a6a6;
   }
 
   &::-ms-fill-upper {
-    background: $acagradient;
+    background: $aca-gradient;
     border: 0px solid #f27b7f;
     border-radius: 0px;
     box-shadow: 1px 1px 2px #a6a6a6;
@@ -88,7 +88,7 @@ input.mint-bar {
     border: 0;
     height: 36px;
     width: 15px;
-    background: $acared;
+    background: $aca-red;
     cursor: pointer;
   }
 }

@@ -1,24 +1,26 @@
-$acapurple: #645aff;
-$acared: #e40c5b;
-$acaorange: #ff4c3b;
+$aca-purple: #645aff;
+$aca-red: #e40c5b;
+$aca-orange: #ff4c3b;
+$aca-dark: #323232;
+$aca-white: #fafafa;
 
-$acagradient: linear-gradient(
+$aca-gradient: linear-gradient(
   328.08deg,
-  $acapurple -40.69%,
-  $acared 36.17%,
-  $acaorange 79.87%
+  $aca-purple -40.69%,
+  $aca-red 36.17%,
+  $aca-orange 79.87%
 );
 
-$acagradient-reverse: linear-gradient(
+$aca-gradient-reverse: linear-gradient(
   148.08deg,
-  $acapurple -40.69%,
-  $acared 36.17%,
-  $acaorange 79.87%
+  $aca-purple -40.69%,
+  $aca-red 36.17%,
+  $aca-orange 79.87%
 );
 
-$acagradient-light: linear-gradient(
+$aca-gradient-light: linear-gradient(
   328.08deg,
-  rgba($acapurple, 0.5) -40.69%,
-  rgba($acared, 0.5) 36.17%,
-  rgba($acaorange, 0.5) 79.87%
+  rgba($aca-purple, 0.5) -40.69%,
+  rgba($aca-red, 0.5) 36.17%,
+  rgba($aca-orange, 0.5) 79.87%
 );

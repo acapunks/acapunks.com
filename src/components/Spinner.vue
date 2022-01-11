@@ -16,7 +16,7 @@
     height: 64px;
     margin: 8px;
     border-radius: 50%;
-    background: $acagradient;
+    background: $aca-gradient;
     animation: lds-circle 2.4s cubic-bezier(0, 0.2, 0.8, 1) infinite;
   }
 }
