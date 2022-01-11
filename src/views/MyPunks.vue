@@ -1,9 +1,9 @@
 <template>
   <section id="my-punks" class="grow flex justify-center items-center">
-    <div class="p-5 w-full sm:w-[32rem]">
-      <carousel />
+    <div class="w-full">
+      <carousel class="mb-8" />
       <div>
-        <p class="text-center">You have 5 Punks!</p>
+        <p class="text-center font-black text-2xl">前端工程師命苦</p>
       </div>
     </div>
   </section>
@@ -12,3 +12,11 @@
 <script setup lang="ts">
 import Carousel from '@/components/Carousel.vue'
 </script>
+
+<style lang="scss">
+@import "@/assets/scss/color";
+
+#my-punks {
+  background: $acagradient-light;
+}
+</style>
