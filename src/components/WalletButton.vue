@@ -1,15 +1,11 @@
 <template>
-  <button class="disabled:opacity-50" @click="connectMetaMask" :disabled="operating">{{ text }}</button>
+  <button class="disabled:opacity-50" @click="connectToMetaMask" :disabled="operating">{{ text }}</button>
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
-import {
-  addWalletListener,
-  connectToWallet,
-  disconnected,
-  invalidChain
-} from '@/services/wallet'
+import { ref, computed } from 'vue'
+import { connectToWallet } from '@/services/wallet'
+import { useWalletStore, disconnected, invalidChain } from '@/store/wallet'
 
 const props = defineProps({
   connectHint: {
@@ -23,21 +19,14 @@ const props = defineProps({
 })
 
 const operating = ref(false)
-const text = ref(props.connectHint)
+const walletStore = useWalletStore()
+const text = computed(() => {
+  if (walletStore.address === disconnected) return props.connectHint
+  if (walletStore.address === invalidChain) return props.switchHint
+  return walletStore.address.substring(0, 8) + ' ... ' + walletStore.address.substring(walletStore.address.length - 6)
+})
 
-function bindMetaMask() {
-  function updateText(x: string | symbol) {
-    if (x == disconnected) text.value = props.connectHint
-    else if (x === invalidChain) text.value = props.switchHint
-    else {
-      const addr = x as string
-      text.value = addr.substring(0, 8) + '...' + addr.substring(addr.length - 6, addr.length)
-    }
-  }
-  addWalletListener(updateText)
-}
-
-async function connectMetaMask() {
+async function connectToMetaMask() {
   try {
     operating.value = true
     await connectToWallet()
@@ -45,8 +34,4 @@ async function connectMetaMask() {
     operating.value = false
   }
 }
-
-onMounted(() => {
-  bindMetaMask()
-})
 </script>

@@ -19,11 +19,7 @@
                 </span>
               </button>
             </div>
-            <div class="text-center py-6" style="font-weight: 600">
-              <span v-if="remNftCount === undefined">Loading...</span>
-              <span v-else-if="remNftCount > 0">{{ remNftCount }} Punks Remaining!</span>
-              <span v-else>Sold Out!</span>
-            </div>
+            <div class="text-center py-6" style="font-weight: 600">{{ remNftMsg }}</div>
           </figcaption>
         </figure>
       </div>
@@ -41,15 +37,22 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted, ref } from 'vue'
-import { mint, getRemainingNftCount, onNftSold } from '@/services/nft'
-import { addWalletListener } from '@/services/wallet'
+import { ref, computed, onMounted } from 'vue'
+import { mint } from '@/services/nft'
 import Spinner from '@/components/Spinner.vue'
+import { useWalletStore } from '@/store/wallet'
+import { useNftStore } from '@/store/nft'
 
 const mintCount = ref(1)
-const mintable = ref(false)
 const minting = ref(false)
-const remNftCount = ref(undefined as undefined | number)
+const walletStore = useWalletStore()
+const mintable = computed(() => typeof walletStore.address === 'string')
+const nftStore = useNftStore()
+const remNftMsg = computed(() => {
+  if (nftStore.remaining === undefined) return 'Loading...'
+  if (nftStore.remaining === 0) return 'Sold Out!'
+  return nftStore.remaining + ' Punks Remaining!'
+})
 
 async function onMint() {
   // start mint
@@ -60,14 +63,6 @@ async function onMint() {
   // minted
   minting.value = false
 }
-
-onMounted(() => {
-  // load remaining nft count
-  getRemainingNftCount().then(x => remNftCount.value = x)
-  // register listener
-  addWalletListener(addr => mintable.value = (typeof addr === 'string'))
-  onNftSold(() => remNftCount.value!--)
-})
 </script>
 
 <style lang="scss">
