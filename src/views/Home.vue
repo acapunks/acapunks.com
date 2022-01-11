@@ -1,5 +1,5 @@
 <template>
-  <landing class="grow" />
+  <landing />
   <faq />
 </template>
 
