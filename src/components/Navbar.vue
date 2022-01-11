@@ -33,7 +33,7 @@
           <li><a href="#">Market Place</a></li>
           -->
           <li>
-            <router-link to="/terms-and-conditions" class="nav-link">Terms & Condition</router-link>
+            <router-link to="/terms-and-conditions" class="nav-link">Terms & Conditions</router-link>
           </li>
         </ul>
       </div>

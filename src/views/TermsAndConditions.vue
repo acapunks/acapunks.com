@@ -2,7 +2,7 @@
   <section class="py-24 h-full grow flex items-center">
     <div class="container mx-auto flex justify-center px-4">
       <article class="md:w-3/4 lg:w-2/3 p-8 border rounded-md bg-gray-200 shadow-lg">
-        <h1 class="mb-8 text-3xl font-black">Terms and Condition</h1>
+        <h1 class="mb-8 text-3xl font-black">Terms and Conditions</h1>
         <p class="mb-8">
           The Acapunks is decentralized software running on the
           <a href="https://acala.network" target="_blank" rel="noopener noreferrer">Acala Network</a>.
