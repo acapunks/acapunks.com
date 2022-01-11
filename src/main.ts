@@ -12,10 +12,8 @@ import {
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { createApp } from 'vue'
+import SwiperCore, { Scrollbar } from 'swiper'
 import { createPinia } from 'pinia'
-
-const pinia = createPinia()
-
 import App from '@/App.vue'
 import router from '@/router'
 import '@/assets/css/tailwind.css'
@@ -33,6 +31,10 @@ library.add(
   faFish,
   faRobot
 )
+
+SwiperCore.use([Scrollbar])
+
+const pinia = createPinia()
 
 createApp(App)
   .use(router)
