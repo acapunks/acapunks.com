@@ -18,8 +18,6 @@ const getWalletStore = defineStore('wallet', {
 })
 
 async function init() {
-  console.log('wallet store initialized...')
-
   if (window.ethereum === undefined) {
     // No metamask detected
     return

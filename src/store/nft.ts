@@ -16,8 +16,6 @@ const getNftStore = defineStore('nft', {
 })
 
 async function init() {
-  console.log('nft store initialized...')
-
   const provider = getAnonymousProvider()
   const cAcapunk = new ethers.Contract(acapunks.address, acapunks.abi)
   const sold: BigNumber = await cAcapunk.connect(provider).totalSupply()

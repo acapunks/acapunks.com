@@ -6,10 +6,6 @@ interface MetaMask {
   on(method: string, callback: (...args: any) => any): void
 }
 
-export interface ConnectInfo {
-  chainId: string
-}
-
 declare global {
   interface Window {
     ethereum: (MetaMask & ExternalProvider) | undefined

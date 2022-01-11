@@ -19,45 +19,7 @@ export async function connectToWallet(): Promise<JsonRpcProvider | undefined> {
   }
 }
 
-export function getWallet(): JsonRpcProvider | undefined {
-  if (window.ethereum !== undefined) {
-    const provider = new ethers.providers.Web3Provider(window.ethereum)
-    return provider
-  }
-}
-
-export async function addWalletListener(
-  callback: (addr: string | symbol) => void
-): Promise<void> {
-  if (window.ethereum === undefined) {
-    callback(noMetaMask)
-    return
-  }
-
-  // Init the result
-  const provider = getWallet()
-  let [currAddr]: string[] = await provider!.send('eth_accounts', [])
-  let currChainId = +window.ethereum!.networkVersion
-
-  function updateCallback() {
-    if (!currAddr) callback(disconnected)
-    else if (currChainId !== acapunks.metaMaskChainId) callback(invalidChain)
-    else callback(currAddr)
-  }
-  updateCallback()
-
-  // Register listeners
-  window.ethereum.on('accountsChanged', (addresses: string[]) => {
-    currAddr = addresses[0]
-    updateCallback()
-  })
-  window.ethereum.on('chainChanged', (chainId: string) => {
-    currChainId = +chainId
-    updateCallback()
-  })
-}
-
-let defaultProvider: null | Provider = null
+let defaultProvider: undefined | Provider = undefined
 export function getAnonymousProvider(): Provider {
   if (!defaultProvider) {
     defaultProvider = ethers.getDefaultProvider(acapunks.network)
