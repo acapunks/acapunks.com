@@ -1,6 +1,6 @@
 <template>
   <section id="my-punks" class="grow flex justify-center items-center">
-    <div class="p-5" style="max-height: 100vh; max-width: 100vw;">
+    <div class="p-5 w-full sm:w-[32rem]">
       <div class="carousel-wrapper aspect-square flex items-stretch shadow-lg mb-8">
         <swiper :scrollbar="{ hide: true }" class="carousel grow">
           <swiper-slide class="slide">

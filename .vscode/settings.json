@@ -21,7 +21,8 @@
         "pinia",
         "Polkadot",
         "Roboto",
-        "Segoe"
+        "Segoe",
+        "swiper"
     ],
     "css.validate": false
 }
