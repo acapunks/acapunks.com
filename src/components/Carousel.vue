@@ -1,6 +1,6 @@
 <template>
   <div class="carousel" ref="carousel">
-    <a v-for="(slide, i) in slides" class="carousel-item" :href="'#slide' + i">
+    <a v-for="(slide, i) in slides" class="carousel-item">
       <img :src="slide.source" :alt="slide.alt" />
     </a>
   </div>
