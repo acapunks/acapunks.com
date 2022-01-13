@@ -26,7 +26,7 @@ async function init() {
     address: acapunks.address,
     topics: [utils.id('Transfer(address,address,uint256)')]
   }
-  provider.on(filter, () => self.sold!--)
+  provider.on(filter, () => self.sold!++)
 }
 
 let initialized = false
