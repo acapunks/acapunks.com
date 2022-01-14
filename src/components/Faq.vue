@@ -46,7 +46,7 @@
           <p class="answer">
             Active community members that interact with our official
             <a href="https://twitter.com/acapunks" target="_blank" rel="noopener noreferrer">Twitter</a> and
-            <a href="#" target="_blank" rel="noopener noreferrer">Discord</a> will
+            <a href="https://discord.gg/DHGvhfrYFZ" target="_blank" rel="noopener noreferrer">Discord</a> will
             win a chance to mint their AcaPunks in stage one. Visit our discord for detail.
           </p>
         </div>

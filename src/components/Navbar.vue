@@ -49,7 +49,7 @@
             </a>
           </li>
           <li>
-            <a href="#" target="_blank" rel="noopener noreferrer" class="nav-link">
+            <a href="https://discord.gg/DHGvhfrYFZ" target="_blank" rel="noopener noreferrer" class="nav-link">
               <span class="inline-block text-center" style="width: 2em">
                 <fa :icon="['fab', 'discord']" class="mr-1" />
               </span>
