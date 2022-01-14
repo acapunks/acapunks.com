@@ -4,7 +4,7 @@
     <figcaption class="bg-white rounded-bottom">
       <div class="py-6 flex flex-col items-center bg-gray-50" style="box-shadow: inset 0px 4px 4px -4px #AAA, inset 0px -4px 4px -4px #AAA">
         <input v-model="mintCount" type="range" min="1" max="10" class="mint-bar mb-3 w-full block" style="width: 80%" />
-        <button class="block w-full py-2 border rounded-full border-aca-red text-aca-red active:text-white hover:shadow active:bg-aca-red active-bg-opacity-1 transition-colors disabled:opacity-50 disabled:text-aca-red disabled:bg-inherit disabled:shadow-none" style="width: 60%" @click="onMint" :disabled="!mintable || minting">
+        <button class="block w-full py-2 border rounded-full border-aca-red text-aca-red active:text-white hover:shadow active:bg-aca-red active-bg-opacity-1 transition-colors" style="width: 60%" @click="onMint">
           <span v-if="minting">Minting...</span>
           <span v-else>
             Mint
@@ -31,17 +31,16 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed, onMounted } from 'vue'
+import { ref, computed } from 'vue'
 import { toastInfo, toastError } from '@/services/toast'
 import { mint } from '@/services/nft'
 import Spinner from '@/components/Spinner.vue'
-import { useWalletStore } from '@/store/wallet'
+import { useWalletStore, disconnected, invalidChain } from '@/store/wallet'
 import { useNftStore } from '@/store/nft'
 
 const mintCount = ref(1)
 const minting = ref(false)
 const walletStore = useWalletStore()
-const mintable = computed(() => typeof walletStore.address === 'string')
 const nftStore = useNftStore()
 const remNftMsg = computed(() => {
   if (nftStore.remaining === undefined) return 'Loading...'
@@ -56,6 +55,15 @@ function hideMintingPage() {
 }
 
 async function onMint() {
+  if (walletStore.address === disconnected) {
+    toastError('Please connect to the wallet.')
+    return
+  }
+  if (walletStore.address === invalidChain) {
+    toastError('Please switch to the correct chain.')
+    return
+  }
+
   // start mint
   const fb = await mint(mintCount.value)
 
