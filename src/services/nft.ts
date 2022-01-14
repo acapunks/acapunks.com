@@ -1,43 +1,30 @@
-import { ethers, utils, BigNumber } from 'ethers'
+// https://docs.ethers.io/v5/api/contract/contract/#Contract
+// https://docs.ethers.io/v5/api/providers/types/#providers-TransactionResponse
+
+import { ethers, utils } from 'ethers'
+import { TransactionResponse } from '@ethersproject/providers'
 import * as acapunks from './contract-meta'
 
-const poopooKey = ethers.utils.arrayify(
-  '0x525b97ee356971c896d04ead6fe238dcc71c38e590cf23a967b33ec5e5b2b2cf50d959a6658b79d1896ff3047ec98ae4e82434d8fb0f4c3b791a16710ff0f1471c'
-)
+const requiredConfirmCount = 10
+const poopooKey = ethers.utils.arrayify('') // will be changed when acala network is online
 
 export async function mint(count: number): Promise<() => Promise<void>> {
   const provider = new ethers.providers.Web3Provider(window.ethereum!)
-  const signer = provider!.getSigner()
-  const myAddr = await signer.getAddress()
+  const signer = provider.getSigner()
+
   const ctrAca = new ethers.Contract(acapunks.address, acapunks.abi)
-  // https://docs.ethers.io/v5/api/contract/contract/#Contract--readonly
-  await ctrAca.connect(signer).mint(count, poopooKey, {
-    value: ethers.utils.parseUnits(count.toString(), '16')
-  })
+  const _count = { value: ethers.utils.parseUnits(count.toString(), '16') }
+  const ta: TransactionResponse = await ctrAca
+    .connect(signer)
+    // count, key, mint count
+    .mint(count, poopooKey, _count)
 
-  // Now minting
+  // throws error if the user is poor
+
+  // minting; returns back now
+
   return async function (): Promise<void> {
-    const filter = {
-      address: acapunks.address,
-      topics: [
-        // the name of the event, parentheses containing the data type of each event, no spaces
-        utils.id('Transfer(address,address,uint256)'),
-        null,
-        utils.hexZeroPad(myAddr, 32)
-      ]
-    }
-
-    return new Promise(res => {
-      let minted = 0
-      function callback() {
-        minted++
-        if (minted == /* don't use === since count may be string */ count) {
-          // Remove listener once the transaction is done
-          provider!.off(filter, callback)
-          res()
-        }
-      }
-      provider.on(filter, callback)
-    })
+    await ta.wait(requiredConfirmCount)
+    // minted or throws error
   }
 }
