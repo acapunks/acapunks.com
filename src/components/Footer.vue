@@ -1,7 +1,7 @@
 <template>
   <footer class="py-3 text-center bg-gray-100">
     <div class="md:flex flex-row-reverse justify-center items-center text-center">
-      <div class="mb-2 md:mb-0 md:pl-12 social-links">
+      <div class="flex-1 text-center md:text-left mb-2 md:mb-0 md:pl-12 social-links">
         <a class="mr-4" href="https://twitter.com/acapunks" target="_blank" rel="noopener noreferrer">
           <fa :icon="['fab', 'twitter']" />
         </a>
@@ -12,9 +12,9 @@
           <fa :icon="['fas', 'envelope']" />
         </a>
       </div>
-      <div class="relative md:pr-12 md:border-r md:border-slate-300" style="top: 0.13em; font-size:1.05em; ">
-        Powered By
-        <a target="_blank" href="https://acala.network" rel="noopener noreferrer" class="ml-1 relative" style="top: -0.13em;">
+      <div class="flex-1 text-center md:text-right md:pr-12 md:border-r md:border-slate-300">
+        <span class="relative" style="top: 0.13em; font-size:1.05em;"></span>Powered By
+        <a target="_blank" href="https://acala.network" rel="noopener noreferrer" class="ml-1">
           <img src="@/assets/images/acala.svg" class="h-9 inline-block" />
         </a>
       </div>
