@@ -30,6 +30,8 @@ import AcalaFooter from '@/components/Footer.vue'
 </script>
 
 <style lang="scss">
+@import "@/assets/scss/main";
+
 #app {
   #popup {
     box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.2);
