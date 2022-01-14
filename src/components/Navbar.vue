@@ -4,7 +4,7 @@
       <!-- logo -->
       <div class="self-stretch flex items-center mr-8">
         <router-link to="/#landing" class="inline-flex items-center nav-link">
-          <img src="@/assets/images/brand.svg" width="48" height="48" class="mr-2" />Acapunks
+          <img src="@/assets/images/brand.svg" width="48" height="48" class="mr-2" />AcaPunks
         </router-link>
       </div>
 

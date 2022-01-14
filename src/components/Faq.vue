@@ -59,7 +59,7 @@
           <p class="answer">
             Set up your
             <a href="https://metamask.io" target="_blank" rel="noopener noreferrer">Metamask</a>
-            wallet. On the mint page, you can connect to your wallet and mint 1 Acapunk for ACA worth ~0.05 ETH.
+            wallet. On the mint page, you can connect to your wallet and mint 1 AcaPunk for ACA worth ~0.05 ETH.
             However, it will be too late to get one at mint cost if they are sold out.
           </p>
         </div>

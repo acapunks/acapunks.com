@@ -4,10 +4,10 @@
       <article class="md:w-3/4 lg:w-2/3 p-8 border rounded-md bg-gray-200 shadow-lg">
         <h1 class="mb-8 text-3xl font-black">Terms and Conditions</h1>
         <p class="mb-8">
-          The Acapunks is decentralized software running on the
+          The AcaPunks is a decentralized software running on the
           <a href="https://acala.network" target="_blank" rel="noopener noreferrer">Acala Network</a>.
           This website is only an interface built to help users interact with
-          that Acala smart contract. No Acapunk ownership is managed by this
+          that Acala smart contract. No AcaPunk ownership is managed by this
           website or by
           <a href="https://twitter.com/parachainlabs" target="_blank" rel="noopener noreferrer">Parachain Labs</a>.
           Users are entirely responsible for the
