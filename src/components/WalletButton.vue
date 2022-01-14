@@ -4,7 +4,7 @@
 
 <script setup lang="ts">
 import { ref, computed } from 'vue'
-import { connectToWallet } from '@/services/wallet'
+import { connectToWallet } from '@/services/web3/wallet'
 import { useWalletStore, disconnected, invalidChain } from '@/store/wallet'
 
 const props = defineProps({

@@ -1,7 +1,7 @@
 import { defineStore } from 'pinia'
 import { ethers, BigNumber, utils } from 'ethers'
-import * as acapunks from '@/services/contract-meta'
-import { getAnonymousProvider } from '@/services/wallet'
+import * as acapunks from '@/services/web3/contract-meta'
+import { getAnonymousProvider } from '@/services/web3/wallet'
 
 const getNftStore = defineStore('nft', {
   state: () => {

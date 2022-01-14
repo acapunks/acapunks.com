@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia'
 import { ethers } from 'ethers'
-import * as acapunks from '@/services/contract-meta'
+import * as acapunks from '@/services/web3/contract-meta'
 
 export const disconnected = Symbol()
 export const invalidChain = Symbol()

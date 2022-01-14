@@ -33,7 +33,7 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
 import { toastInfo, toastError } from '@/services/toast'
-import { mint } from '@/services/nft'
+import { mint } from '@/services/web3/nft'
 import Spinner from '@/components/Spinner.vue'
 import { useWalletStore, disconnected, invalidChain } from '@/store/wallet'
 import { useNftStore } from '@/store/nft'
