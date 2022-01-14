@@ -18,7 +18,9 @@
     <!-- mask -->
     <div v-if="minting" id="page-mask" class="fixed top-0 bottom-0 left-0 right-0 bg-black bg-opacity-80 z-20" @click="hideMintingPage">
       <div class="w-full h-full flex flex-col justify-center items-center px-8">
-        <spinner><img src="@/assets/images/acala-coin.svg" width="64" height="64"></spinner>
+        <spinner>
+          <img src="@/assets/images/acala-coin.svg" width="64" height="64" />
+        </spinner>
         <div class="mt-4 text-center minting">
           <p class="text-3xl font-bold mb-2">Minting...</p>
           <p>click anywhere to close this window or wait until minted</p>
@@ -29,7 +31,8 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed } from 'vue'
+import { ref, computed, onMounted } from 'vue'
+import { toastInfo, toastError } from '@/services/toast'
 import { mint } from '@/services/nft'
 import Spinner from '@/components/Spinner.vue'
 import { useWalletStore } from '@/store/wallet'
@@ -49,6 +52,7 @@ const remNftMsg = computed(() => {
 function hideMintingPage() {
   document.body.classList.remove('no-scroll') // unlock scroll
   minting.value = false
+  toastInfo('Your mint is processing.')
 }
 
 async function onMint() {
@@ -60,12 +64,16 @@ async function onMint() {
     document.body.classList.add('no-scroll') // lock scroll
     minting.value = true
     await fb()
-  } finally {
+    document.body.classList.remove('no-scroll') // unlock scroll
+    minting.value = false
+    toastInfo('Congratulation! You receive your AcaPunks!')
+  } catch (e: any) {
     // mint done or failed
-    hideMintingPage()
+    document.body.classList.remove('no-scroll') // unlock scroll
+    minting.value = false
+    toastError('Sorry, something went wrong. The mint failed.')
   }
 }
-
 </script>
 
 <style lang="scss">
