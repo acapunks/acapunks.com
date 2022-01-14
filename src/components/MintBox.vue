@@ -64,22 +64,31 @@ async function onMint() {
     return
   }
 
-  // start mint
-  const fb = await mint(mintCount.value)
-
   try {
+    // start mint
+    const fb = await mint(mintCount.value)
+
     // minting
     document.body.classList.add('no-scroll') // lock scroll
     minting.value = true
     await fb()
+
+    // mint done
     document.body.classList.remove('no-scroll') // unlock scroll
     minting.value = false
     toastInfo('Congratulation! You receive your AcaPunks!')
   } catch (e: any) {
-    // mint done or failed
+    // mint failed
+
     document.body.classList.remove('no-scroll') // unlock scroll
     minting.value = false
-    toastError('Sorry, something went wrong. The mint failed.')
+
+    if (e?.error?.code === -32000) {
+      toastError('Sorry, your have insufficient funds.')
+    }
+    else {
+      toastError('Sorry, something went wrong. The mint failed.')
+    }
   }
 }
 </script>
