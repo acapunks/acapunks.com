@@ -1,6 +1,8 @@
 <template>
   <div class="lds-circle">
-    <div class="bg-aca-gradient"></div>
+    <div>
+      <slot></slot>
+    </div>
   </div>
 </template>
 
@@ -8,30 +10,22 @@
 @import "@/assets/scss/color";
 
 .lds-circle {
-  display: inline-block;
   transform: translateZ(1px);
 
   & > div {
-    display: inline-block;
-    width: 64px;
-    height: 64px;
-    margin: 8px;
-    border-radius: 50%;
-    animation: lds-circle 2.4s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+    animation: spinner 2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
   }
 }
 
-@keyframes lds-circle {
-  0%,
-  100% {
-    animation-timing-function: cubic-bezier(0.5, 0, 1, 0.5);
-  }
+@keyframes spinner {
   0% {
     transform: rotateY(0deg);
   }
-  50% {
-    transform: rotateY(1800deg);
-    animation-timing-function: cubic-bezier(0, 0.5, 0.5, 1);
+  7% {
+    transform: rotateY(0deg);
+  }
+  93% {
+    transform: rotateY(3600deg);
   }
   100% {
     transform: rotateY(3600deg);

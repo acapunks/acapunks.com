@@ -16,19 +16,20 @@
     </figcaption>
 
     <!-- mask -->
-    <div v-if="minting" id="page-mask" class="fixed top-0 bottom-0 left-0 right-0 bg-black bg-opacity-80 z-20">
-      <div id="mint-loading" class="w-full h-full flex flex-col justify-center text-center">
-        <spinner />
-        <h3 class="mt-6 text-3xl font-bold text-gray-50">
-          <span class="minting">Minting...</span>
-        </h3>
+    <div v-if="minting" id="page-mask" class="fixed top-0 bottom-0 left-0 right-0 bg-black bg-opacity-80 z-20" @click="hideMintingPage">
+      <div class="w-full h-full flex flex-col justify-center items-center px-8">
+        <spinner><img src="@/assets/images/acala-coin.svg" width="64" height="64"></spinner>
+        <div class="mt-4 text-center minting">
+          <p class="text-3xl font-bold mb-2">Minting...</p>
+          <p>click anywhere to close this window or wait until minted</p>
+        </div>
       </div>
     </div>
   </figure>
 </template>
 
 <script setup lang="ts">
-import { ref, computed, onMounted } from 'vue'
+import { ref, computed } from 'vue'
 import { mint } from '@/services/nft'
 import Spinner from '@/components/Spinner.vue'
 import { useWalletStore } from '@/store/wallet'
@@ -45,15 +46,26 @@ const remNftMsg = computed(() => {
   return nftStore.remaining + ' Punks Remaining!'
 })
 
+function hideMintingPage() {
+  document.body.classList.remove('no-scroll') // unlock scroll
+  minting.value = false
+}
+
 async function onMint() {
   // start mint
   const fb = await mint(mintCount.value)
-  // minting
-  minting.value = true
-  await fb()
-  // minted
-  minting.value = false
+
+  try {
+    // minting
+    document.body.classList.add('no-scroll') // lock scroll
+    minting.value = true
+    await fb()
+  } finally {
+    // mint done or failed
+    hideMintingPage()
+  }
 }
+
 </script>
 
 <style lang="scss">
