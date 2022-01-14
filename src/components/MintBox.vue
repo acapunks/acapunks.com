@@ -64,10 +64,24 @@ async function onMint() {
     return
   }
 
+  let fb
   try {
-    // start mint
-    const fb = await mint(mintCount.value)
+    // Prompt metamask to mint
+    fb = await mint(mintCount.value)
+  } catch (e: any) {
+    if (e?.error?.code === -32000) {
+      toastError('Sorry, your have insufficient funds.')
+    }
+    else if (e?.code === 4001) {
+      // User rejects
+    }
+    else {
+      toastError('Sorry, something went wrong. The mint failed.')
+    }
+    return
+  }
 
+  try {
     // minting
     document.body.classList.add('no-scroll') // lock scroll
     minting.value = true
@@ -79,16 +93,9 @@ async function onMint() {
     toastInfo('Congratulation! You receive your AcaPunks!')
   } catch (e: any) {
     // mint failed
-
     document.body.classList.remove('no-scroll') // unlock scroll
     minting.value = false
-
-    if (e?.error?.code === -32000) {
-      toastError('Sorry, your have insufficient funds.')
-    }
-    else {
-      toastError('Sorry, something went wrong. The mint failed.')
-    }
+    toastError('Sorry, something went wrong. The mint failed.')
   }
 }
 </script>
