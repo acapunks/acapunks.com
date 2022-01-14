@@ -3,10 +3,10 @@
 .c-toast-container {
   .c-toast {
     &.c-toast--error {
-      @apply shadow-md text-white px-4 py-1.5 mx-8 mb-8 md:mx-0 md:mb-0 w-[calc(100vw-4rem)] md:w-[30rem] bg-opacity-90 bg-aca-purple font-sans cursor-default box-border;
+      @apply shadow-md text-white px-4 py-1.5 mx-8 md:mx-0 w-[calc(100vw-4rem)] md:w-[30rem] bg-opacity-90 bg-aca-purple font-sans cursor-default box-border;
     }
     &.c-toast--success {
-      @apply shadow-md text-white px-4 py-1.5 mx-8 mb-8 md:mx-0 md:mb-0 w-[calc(100vw-4rem)] md:w-[30rem] bg-opacity-90 bg-aca-red font-sans cursor-default box-border;
+      @apply shadow-md text-white px-4 py-1.5 mx-8 md:mx-0 w-[calc(100vw-4rem)] md:w-[30rem] bg-opacity-90 bg-aca-red font-sans cursor-default box-border;
     }
   }
 }
