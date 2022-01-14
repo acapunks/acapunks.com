@@ -1,4 +1,4 @@
-import { ContractInterface } from 'ethers'
+import { ethers, ContractInterface } from 'ethers'
 import { Networkish } from '@ethersproject/networks'
 
 // https://ropsten.etherscan.io/address/0x351821Ed49F23f884D6B168247Ec36D7732D8BD3#code
@@ -342,3 +342,11 @@ export const address = '0x351821Ed49F23f884D6B168247Ec36D7732D8BD3'
 export const totalNftCount = 10000
 export const network: Networkish = 'ropsten'
 export const metaMaskChainId = 3
+
+let contract: undefined | ethers.Contract = undefined
+export function getContract(): ethers.Contract {
+  if (contract === undefined) {
+    contract = new ethers.Contract(address, abi)
+  }
+  return contract
+}

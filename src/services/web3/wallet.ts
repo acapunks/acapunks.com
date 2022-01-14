@@ -1,4 +1,3 @@
-import assert from 'assert'
 import { ethers } from 'ethers'
 import { JsonRpcProvider, Provider } from '@ethersproject/providers'
 import * as acapunks from './contract-meta'
@@ -14,8 +13,7 @@ export function isMetaMskInstalled() {
 let provider: undefined | JsonRpcProvider = undefined
 export function getProvider(): JsonRpcProvider {
   if (provider === undefined) {
-    assert(window.ethereum !== undefined)
-    provider = new ethers.providers.Web3Provider(window.ethereum)
+    provider = new ethers.providers.Web3Provider(window.ethereum!)
   }
   return provider
 }

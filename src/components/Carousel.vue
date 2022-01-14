@@ -7,7 +7,6 @@
 </template>
 
 <script lang="ts">
-import assert from 'assert'
 import { onMounted, ref, defineComponent, PropType } from 'vue'
 import M from 'materialize-css'
 
@@ -28,8 +27,7 @@ export default defineComponent({
 
     onMounted(() => {
       // init materialize css
-      assert(carousel.value !== null)
-      M.Carousel.init(carousel.value)
+      M.Carousel.init(carousel.value as HTMLDivElement)
     })
 
     return {

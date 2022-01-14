@@ -1,4 +1,3 @@
-import assert from 'assert'
 import { defineStore } from 'pinia'
 import * as acapunks from '@/services/web3/contract-meta'
 import { getProvider, isMetaMskInstalled } from '@/services/web3/wallet'
@@ -23,14 +22,13 @@ async function init() {
     // No metamask detected
     return
   }
-  assert(window.ethereum !== undefined)
 
   const self = getWalletStore()
 
   // Init the result
   const provider = getProvider()
   let [currAddr]: string[] = await provider.send('eth_accounts', [])
-  let currChainId = +window.ethereum.networkVersion
+  let currChainId = +window.ethereum!.networkVersion
 
   function updateCallback() {
     if (!currAddr) {
@@ -46,12 +44,12 @@ async function init() {
   }
 
   // register listeners
-  window.ethereum.on('accountsChanged', (addresses: string[]) => {
+  window.ethereum!.on('accountsChanged', (addresses: string[]) => {
     // detect disconnecting or account changed event
     currAddr = addresses[0] // undefined if disconnected
     updateCallback()
   })
-  window.ethereum.on('chainChanged', (chainId: string) => {
+  window.ethereum!.on('chainChanged', (chainId: string) => {
     // detect chain changed event
     currChainId = +chainId
     updateCallback()

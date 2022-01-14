@@ -1,5 +1,7 @@
 // https://docs.ethers.io/v5/api/contract/contract/#Contract
 // https://docs.ethers.io/v5/api/providers/types/#providers-TransactionResponse
+// https://docs.openzeppelin.com/contracts/2.x/api/token/erc721
+// https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/extensions/ERC721Enumerable.sol
 
 import { ethers } from 'ethers'
 import { TransactionResponse } from '@ethersproject/providers'
@@ -12,9 +14,9 @@ const whitelistKey = new Uint8Array() // ethers.utils.arrayify('0x1234') will be
 export async function mint(count: number): Promise<() => Promise<void>> {
   const provider = getProvider()
   const signer = provider.getSigner()
-  const ctrAca = new ethers.Contract(acapunks.address, acapunks.abi)
   const _count = { value: ethers.utils.parseUnits(count.toString(), '16') }
-  const ta: TransactionResponse = await ctrAca
+  const ta: TransactionResponse = await acapunks
+    .getContract()
     .connect(signer)
     // count, key, mint count
     .mint(count, whitelistKey, _count)
@@ -28,6 +30,8 @@ export async function mint(count: number): Promise<() => Promise<void>> {
   }
 }
 
-export async function getNftCount() {}
+export function getNftCount(addr: string): Promise<number> {
+  return acapunks.getContract().balanceOf(addr)
+}
 
-export async function getNfts(offset: 0, count: 5) {}
+export async function getNfts(addr: string, offset: 0, count: 5) {}
