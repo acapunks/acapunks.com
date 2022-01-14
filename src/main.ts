@@ -7,7 +7,8 @@ import {
   faFish,
   faHorseHead,
   faRobot,
-  faSpider
+  faSpider,
+  faEnvelope
 } from '@fortawesome/free-solid-svg-icons'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
@@ -28,7 +29,8 @@ library.add(
   faSpider,
   faHorseHead,
   faFish,
-  faRobot
+  faRobot,
+  faEnvelope
 )
 
 const pinia = createPinia()
