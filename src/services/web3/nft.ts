@@ -5,13 +5,12 @@ import { ethers } from 'ethers'
 import { TransactionResponse } from '@ethersproject/providers'
 import * as acapunks from './contract-meta'
 
-const requiredConfirmCount = 10
+const requiredConfirmCount = 3
 const whitelistKey = new Uint8Array() // ethers.utils.arrayify('0x1234') will be changed when acala network is online
 
 export async function mint(count: number): Promise<() => Promise<void>> {
   const provider = new ethers.providers.Web3Provider(window.ethereum!)
   const signer = provider!.getSigner()
-  const myAddr = await signer.getAddress()
   const ctrAca = new ethers.Contract(acapunks.address, acapunks.abi)
   const _count = { value: ethers.utils.parseUnits(count.toString(), '16') }
   const ta: TransactionResponse = await ctrAca
