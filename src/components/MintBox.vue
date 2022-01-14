@@ -20,7 +20,7 @@
       <div id="mint-loading" class="w-full h-full flex flex-col justify-center text-center">
         <spinner />
         <h3 class="mt-6 text-3xl font-bold text-gray-50">
-          <span>Minting...</span>
+          <span class="minting">Minting...</span>
         </h3>
       </div>
     </div>
@@ -58,15 +58,12 @@ async function onMint() {
 
 <style lang="scss">
 @import "@/assets/scss/color";
+@import "@/assets/scss/mint-bar";
 
-#mint-loading {
-  h3 {
-    span {
-      background: $aca-gradient;
-      background-clip: text;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-  }
+.minting {
+  background: $aca-gradient;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 </style>

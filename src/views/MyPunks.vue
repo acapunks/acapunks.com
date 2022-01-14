@@ -1,5 +1,5 @@
 <template>
-  <section id="my-punks" class="grow flex justify-center items-center">
+  <section id="my-punks" class="grow flex justify-center items-center aca-gradient-light">
     <div class="w-full">
       <carousel class="mb-8" :slides="[]" />
       <div>
@@ -12,11 +12,3 @@
 <script setup lang="ts">
 import Carousel from '@/components/Carousel.vue'
 </script>
-
-<style lang="scss">
-@import "@/assets/scss/color";
-
-#my-punks {
-  background: $aca-gradient-light;
-}
-</style>

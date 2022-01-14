@@ -1,11 +1,12 @@
 <template>
   <div class="lds-circle">
-    <div></div>
+    <div class="bg-aca-gradient"></div>
   </div>
 </template>
 
 <style lang="scss">
 @import "@/assets/scss/color";
+
 .lds-circle {
   display: inline-block;
   transform: translateZ(1px);
@@ -16,7 +17,6 @@
     height: 64px;
     margin: 8px;
     border-radius: 50%;
-    background: $aca-gradient;
     animation: lds-circle 2.4s cubic-bezier(0, 0.2, 0.8, 1) infinite;
   }
 }

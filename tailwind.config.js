@@ -1,3 +1,7 @@
+const acaRed = '#e40c5b'
+const acaOrange = '#ff4c3b'
+const acaPurple = '#645aff'
+
 module.exports = {
   darkMode: 'media', // or 'media' or 'class'
   content: [
@@ -7,11 +11,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'aca-red': '#e40c5b',
-        'aca-orange': '#ff4c3b',
-        'aca-purple': '#645aff',
-        'aca-dark': '#323232',
-        'aca-white': '#fafafa'
+        'aca-red': acaRed,
+        'aca-orange': acaOrange,
+        'aca-purple': acaPurple,
       },
       width: {
         '28/100': '28%'

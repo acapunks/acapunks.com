@@ -1,5 +1,5 @@
 <template>
-  <section scroll="no" id="landing" class="flex flex-col items-stretch lg:flex-row lg:items-center py-10">
+  <section scroll="no" id="landing" class="flex flex-col items-stretch lg:flex-row lg:items-center py-10 bg-aca-gradient-light">
     <div class="lg:container lg:mx-auto grow flex flex-col lg:flex-row justify-center lg:items-center px-4">
       <div class="lg:w-1/3 lg:mb-0 lg:mr-24">
         <h1 class="text-transparent text-4xl lg:text-7xl font-black mb-3">AcaPunks</h1>
@@ -24,8 +24,6 @@ const demoSlides = Array.from({ length: 5 }, (_, i) => i + 1).map(i => ({ source
 @import "@/assets/scss/color";
 
 #landing {
-  background: $aca-gradient-light;
-
   h1 {
     background: $aca-gradient-reverse;
     background-clip: text;
