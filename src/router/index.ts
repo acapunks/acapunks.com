@@ -15,7 +15,7 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/terms-and-conditions',
     name: 'terms-and-conditions',
-    component: () => import(/* webpackChunkName: "about" */ '@/views/TermsAndConditions.vue')
+    component: () => import('@/views/TermsAndConditions.vue')
   },
   {
     path: '/my',
