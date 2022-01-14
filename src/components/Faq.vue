@@ -57,10 +57,10 @@
           </span>
           <h3 class="title">How can I get an AcaPunk?</h3>
           <p class="answer">
-            First, set up your
+            Set up your
             <a href="https://metamask.io" target="_blank" rel="noopener noreferrer">Metamask</a>
-            wallet. On the mint page, you can connect to your wallet and mint 1 Acapunk for 100 ACA.
-            The launching details can be found on the official social media.
+            wallet. On the mint page, you can connect to your wallet and mint 1 Acapunk for ACA worth ~0.05 ETH.
+            However, it will be too late to get one at mint cost if they are sold out.
           </p>
         </div>
 
