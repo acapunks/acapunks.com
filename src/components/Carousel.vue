@@ -1,17 +1,18 @@
 <template>
   <div class="carousel" ref="carousel">
-    <a v-for="(slide, i) in slides" class="carousel-item">
+    <a v-for="slide in slides" class="carousel-item">
       <img :src="slide.source" :alt="slide.alt" />
     </a>
   </div>
 </template>
 
 <script lang="ts">
-import { onMounted, ref, defineProps, defineComponent, PropType } from 'vue'
+import assert from 'assert'
+import { onMounted, ref, defineComponent, PropType } from 'vue'
 import M from 'materialize-css'
 
 interface Slide {
-  source: string,
+  source: string
   alt?: string
 }
 
@@ -27,7 +28,8 @@ export default defineComponent({
 
     onMounted(() => {
       // init materialize css
-      M.Carousel.init(carousel.value!)
+      assert(carousel.value !== null)
+      M.Carousel.init(carousel.value)
     })
 
     return {

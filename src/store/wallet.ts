@@ -1,6 +1,7 @@
+import assert from 'assert'
 import { defineStore } from 'pinia'
-import { ethers } from 'ethers'
 import * as acapunks from '@/services/web3/contract-meta'
+import { getProvider, isMetaMskInstalled } from '@/services/web3/wallet'
 
 export const disconnected = Symbol()
 export const invalidChain = Symbol()
@@ -18,17 +19,18 @@ const getWalletStore = defineStore('wallet', {
 })
 
 async function init() {
-  if (window.ethereum === undefined) {
+  if (!isMetaMskInstalled()) {
     // No metamask detected
     return
   }
+  assert(window.ethereum !== undefined)
 
   const self = getWalletStore()
 
   // Init the result
-  const provider = new ethers.providers.Web3Provider(window.ethereum)
-  let [currAddr]: string[] = await provider!.send('eth_accounts', [])
-  let currChainId = +window.ethereum!.networkVersion
+  const provider = getProvider()
+  let [currAddr]: string[] = await provider.send('eth_accounts', [])
+  let currChainId = +window.ethereum.networkVersion
 
   function updateCallback() {
     if (!currAddr) {

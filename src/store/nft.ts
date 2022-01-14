@@ -1,3 +1,5 @@
+
+import assert from 'assert'
 import { defineStore } from 'pinia'
 import { ethers, BigNumber, utils } from 'ethers'
 import * as acapunks from '@/services/web3/contract-meta'
@@ -26,7 +28,10 @@ async function init() {
     address: acapunks.address,
     topics: [utils.id('Transfer(address,address,uint256)')]
   }
-  provider.on(filter, () => self.sold!++)
+  provider.on(filter, () => {
+    assert(self.sold !== undefined)
+    self.sold++
+  })
 }
 
 let initialized = false
