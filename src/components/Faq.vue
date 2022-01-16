@@ -2,7 +2,7 @@
   <section id="faq" class="text-center py-24 bg-[#f0f1f5]">
     <div class="container mx-auto px-4">
       <div class="mb-8">
-        <h2 class="text-4xl mb-6 text-gray-700 font-black">FAQ</h2>
+        <h1 class="text-4xl mb-6 text-gray-700 font-black">FAQ</h1>
         <p>
           Have questions? Here are the FAQs. Also follow our official
           <a href="https://twitter.com/acapunks" target="_blank" rel="noopener noreferrer">Twitter</a> for updates!
