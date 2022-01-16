@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia'
 import * as acapunks from '@/services/web3/contract-meta'
-import { getProvider, isMetaMskInstalled } from '@/services/web3/wallet'
+import { getUserProvider, isMetaMskInstalled } from '@/services/web3/wallet'
 
 export const disconnected = Symbol()
 export const invalidChain = Symbol()
@@ -26,7 +26,7 @@ async function init() {
   const self = getWalletStore()
 
   // Init the result
-  const provider = getProvider()
+  const provider = getUserProvider()
   let [currAddr]: string[] = await provider.send('eth_accounts', [])
   let currChainId = +window.ethereum!.networkVersion
 

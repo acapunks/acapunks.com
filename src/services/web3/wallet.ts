@@ -11,7 +11,7 @@ export function isMetaMskInstalled() {
 }
 
 let provider: undefined | JsonRpcProvider = undefined
-export function getProvider(): JsonRpcProvider {
+export function getUserProvider(): JsonRpcProvider {
   if (provider === undefined) {
     provider = new ethers.providers.Web3Provider(window.ethereum!)
   }
@@ -22,7 +22,7 @@ export async function connectToWallet(): Promise<boolean> {
   if (!isMetaMskInstalled()) {
     return false
   }
-  const provider = getProvider() as JsonRpcProvider
+  const provider = getUserProvider() as JsonRpcProvider
   // Prompt user for connecting metamask
   await provider.send('eth_requestAccounts', [])
   // Require user to change network

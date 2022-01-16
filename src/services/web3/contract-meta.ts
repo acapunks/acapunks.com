@@ -1,5 +1,7 @@
-import { ethers, ContractInterface } from 'ethers'
+import { ethers, ContractInterface, Signer } from 'ethers'
+import { Provider } from '@ethersproject/providers'
 import { Networkish } from '@ethersproject/networks'
+import { getUserProvider, getAnonymousProvider } from './wallet'
 
 // https://ropsten.etherscan.io/address/0x351821Ed49F23f884D6B168247Ec36D7732D8BD3#code
 export const abi: ContractInterface = [
@@ -343,10 +345,16 @@ export const totalNftCount = 10000
 export const network: Networkish = 'ropsten'
 export const metaMaskChainId = 3
 
-let contract: undefined | ethers.Contract = undefined
-export function getContract(): ethers.Contract {
-  if (contract === undefined) {
-    contract = new ethers.Contract(address, abi)
+export function getContract(
+  signerOrProvider?: Signer | Provider
+): ethers.Contract {
+  return new ethers.Contract(address, abi, signerOrProvider)
+}
+
+let readonlyContract: undefined | ethers.Contract = undefined
+export function getReadonlyContract(): ethers.Contract {
+  if (readonlyContract === undefined) {
+    readonlyContract = new ethers.Contract(address, abi, getAnonymousProvider())
   }
-  return contract
+  return readonlyContract
 }
