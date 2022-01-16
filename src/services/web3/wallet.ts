@@ -2,10 +2,6 @@ import { ethers } from 'ethers'
 import { JsonRpcProvider, Provider } from '@ethersproject/providers'
 import * as acapunks from './contract-meta'
 
-export const noMetaMask = Symbol()
-export const disconnected = Symbol()
-export const invalidChain = Symbol()
-
 export function isMetaMskInstalled() {
   return typeof window.ethereum !== 'undefined'
 }
