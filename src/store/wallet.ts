@@ -2,14 +2,11 @@ import { defineStore } from 'pinia'
 import * as acapunks from '@/services/web3/contract-meta'
 import { getUserProvider, isMetaMskInstalled } from '@/services/web3/wallet'
 
-export const disconnected = Symbol()
-export const invalidChain = Symbol()
-type Address = string | typeof disconnected | typeof invalidChain
-
 const getWalletStore = defineStore('wallet', {
   state: () => {
     return {
-      address: disconnected as Address
+      address: null as string | null,
+      validChain: false
     }
   },
   actions: {
@@ -33,13 +30,12 @@ async function init() {
   function updateCallback() {
     if (!currAddr) {
       // not connected or connected but no account
-      self.address = disconnected
-    } else if (currChainId !== acapunks.metaMaskChainId) {
-      // connected with at least one account but wrong chain
-      self.address = invalidChain
+      self.address = null
+      self.validChain = false
     } else {
       // connected at correct chain and has at least one account
       self.address = currAddr
+      self.validChain = currChainId === acapunks.metaMaskChainId
     }
   }
 

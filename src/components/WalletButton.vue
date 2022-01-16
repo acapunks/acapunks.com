@@ -5,7 +5,7 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
 import { connectToWallet } from '@/services/web3/wallet'
-import { useWalletStore, disconnected, invalidChain } from '@/store/wallet'
+import { useWalletStore } from '@/store/wallet'
 
 const props = defineProps({
   connectHint: {
@@ -21,8 +21,8 @@ const props = defineProps({
 const operating = ref(false)
 const walletStore = useWalletStore()
 const text = computed(() => {
-  if (walletStore.address === disconnected) return props.connectHint
-  if (walletStore.address === invalidChain) return props.switchHint
+  if (walletStore.address === null) return props.connectHint
+  if (!walletStore.validChain) return props.switchHint
   return walletStore.address.substring(0, 8) + ' ... ' + walletStore.address.substring(walletStore.address.length - 6)
 })
 

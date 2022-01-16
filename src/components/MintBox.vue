@@ -35,7 +35,7 @@ import { ref, computed } from 'vue'
 import { toastInfo, toastError } from '@/services/toast'
 import { mint } from '@/services/web3/nft'
 import Spinner from '@/components/Spinner.vue'
-import { useWalletStore, disconnected, invalidChain } from '@/store/wallet'
+import { useWalletStore } from '@/store/wallet'
 import { useNftStore } from '@/store/nft'
 
 const mintCount = ref(1)
@@ -55,11 +55,11 @@ function hideMintingPage() {
 }
 
 async function onMint() {
-  if (walletStore.address === disconnected) {
+  if (walletStore.address === null) {
     toastError('Please connect to the wallet.')
     return
   }
-  if (walletStore.address === invalidChain) {
+  if (!walletStore.validChain) {
     toastError('Please switch to the correct chain.')
     return
   }
