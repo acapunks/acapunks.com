@@ -24,7 +24,7 @@
       </div>
       <div v-if="nftCount !== 0" class="pt-4 mt-9 border-t border-slate-300">
         <p class="hidden md:block text-right mb-1">Click the punk to show the detail.</p>
-        <p class="text-red-500 text-right mb-1">[Hint] these are just fake punk images for testing.</p>
+        <p class="text-red-500 text-right mb-1">[Hint] These are just fake punk images for testing. There may be duplicated images in the collection, which is guaranteed not to occur in the production. Each AcaPunk is distinct.</p>
         <div class="grid grid-cols-2 md:grid-cols-6 xl:grid-cols-10 gap-4 mt-4">
           <div v-for="nft in nftMeta" class="punks-wrapper">
             <div class="w-full aspect-square relative">
@@ -41,7 +41,7 @@
     <screen-mask :active="detailedImageUrl !== null" class="text-neutral-300" @click="onClickPageMask">
       <div class="w-full h-full flex flex-col justify-center items-center px-8">
         <img :src="detailedImageUrl!" class="w-[80vw] lg:w-auto lg:h-[50vh] aspect-square mb-2" />
-        <p class="mb-1 text-red-500">[Hint] the fake low-quality preview image is just for testing.</p>
+        <p class="mb-1 text-red-500">[Hint] The fake low-quality preview image is just for testing.</p>
         <p>Click anywhere to close.</p>
       </div>
     </screen-mask>
