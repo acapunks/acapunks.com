@@ -23,8 +23,9 @@
         </div>
       </div>
       <div v-if="nftCount !== 0" class="pt-4 mt-9 border-t border-slate-300">
-        <p class="hidden md:block text-right mb-4">Click the punk to show the detail.</p>
-        <div class="grid grid-cols-2 md:grid-cols-6 xl:grid-cols-10 gap-4">
+        <p class="hidden md:block text-right mb-1">Click the punk to show the detail.</p>
+        <p class="text-red-500 text-right mb-1">[Hint] these are just fake punk images in the test phase.</p>
+        <div class="grid grid-cols-2 md:grid-cols-6 xl:grid-cols-10 gap-4 mt-4">
           <div v-for="nft in nftMeta" class="punks-wrapper">
             <div class="w-full aspect-square relative">
               <div class="skeleton w-full h-full absolute top-0 left-0"></div>
