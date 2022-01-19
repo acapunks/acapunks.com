@@ -9,7 +9,7 @@
         </p>
       </div>
 
-      <div class="lg:flex flex-row flex-wrap justify-around">
+      <div class="lg:flex flex-row flex-wrap justify-center gap-x-24 gap-y-36 pt-28">
         <div class="question">
           <span class="icon">
             <fa icon="fish" />
@@ -87,7 +87,7 @@
   background-image: url("@/assets/images/bg-faq.svg");
 
   .question {
-    @apply relative mb-8 lg:w-2/5 2xl:w-28/100 inline-block bg-white border border-gray-200 rounded-3xl shadow-md px-4 lg:px-8 pb-10 mt-16 md:mx-6;
+    @apply relative lg:w-2/5 2xl:w-28/100 inline-block bg-white border border-gray-200 rounded-3xl shadow-md px-4 lg:px-8 pb-10;
 
     padding-top: 42px;
 
