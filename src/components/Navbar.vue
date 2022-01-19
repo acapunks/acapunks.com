@@ -24,11 +24,9 @@
           <li>
             <router-link to="/#faq" class="nav-link">FAQ</router-link>
           </li>
-          <!--
           <li>
-            <router-link to="/my" class="nav-link">My Punks</router-link>
+            <router-link to="/my" class="nav-link">Punk Pocket</router-link>
           </li>
-          -->
           <!--
           <li><a href="#">Market Place</a></li>
           -->
