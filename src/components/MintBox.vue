@@ -16,7 +16,7 @@
     </figcaption>
 
     <!-- mask -->
-    <div v-if="minting" id="page-mask" class="fixed top-0 bottom-0 left-0 right-0 bg-black bg-opacity-80 z-20" @click="hideMintingPage">
+    <screen-mask :active="minting" @click="hideMintingPage">
       <div class="w-full h-full flex flex-col justify-center items-center px-8">
         <spinner>
           <img src="@/assets/images/acala-coin.svg" width="64" height="64" />
@@ -26,7 +26,7 @@
           <p>click anywhere to close this window or wait until minted</p>
         </div>
       </div>
-    </div>
+    </screen-mask>
   </figure>
 </template>
 
@@ -37,6 +37,7 @@ import { mint } from '@/services/web3/nft'
 import Spinner from '@/components/Spinner.vue'
 import { useWalletStore } from '@/store/wallet'
 import { useNftStore } from '@/store/nft'
+import ScreenMask from '@/components/ScreenMask.vue'
 
 const mintCount = ref(1)
 const minting = ref(false)

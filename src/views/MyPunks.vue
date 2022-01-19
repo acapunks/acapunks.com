@@ -1,4 +1,5 @@
 <template>
+  <!-- https://stackoverflow.com/questions/1462138/event-listener-for-when-element-becomes-visible -->
   <section id="my-punks" class="container mx-auto grow py-20 px-4 flex items-center">
     <div class="w-full">
       <div class="md:flex items-stretch h-[25vh]">

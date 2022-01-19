@@ -5,7 +5,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, defineProps, watch, toRef } from 'vue'
+import { defineProps, watch, toRef } from 'vue'
 
 const props = defineProps({
   active: {
@@ -22,13 +22,11 @@ function hideMask() {
   document.body.classList.remove('no-scroll') // lock scroll
 }
 
-watch(toRef(props, 'active'), (cur, prev) => {
+watch(toRef(props, 'active'), (cur) => {
   if (cur === true) {
-    console.log('watch: show mask')
     showMask()
   }
   else {
-    console.log('watch: hide mask')
     hideMask()
   }
 })
