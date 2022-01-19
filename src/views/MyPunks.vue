@@ -1,7 +1,7 @@
 <template>
   <section id="my-punks" class="container mx-auto grow py-20 px-4 flex items-center">
     <div class="w-full">
-      <div class="md:flex items-stretch">
+      <div class="md:flex items-stretch h-[25vh]">
         <div class="grow items-center" :class="nftCount && nftCount > 0 ? 'flex' : 'block'">
           <div>
             <h1 class="text-2xl md:text-3xl lg:text-4xl mb-1 text-center" :class="nftCount && nftCount > 0 ? 'text-left' : 'text-center'">
@@ -20,9 +20,6 @@
             </p>
           </div>
         </div>
-        <div v-if="nftCount && nftCount > 0" class="hidden md:block aspect-square bg-slate-200" style="height: 25vh">
-          <img :src="detailedImageUrl" class="w-full aspect-square" />
-        </div>
       </div>
       <div v-if="nftCount !== 0" class="pt-4 mt-9 border-t border-slate-300">
         <p class="hidden md:block text-right mb-4">Click the punk to show the detail.</p>
@@ -37,22 +34,40 @@
         </div>
       </div>
     </div>
+
+    <!-- mask -->
+    <screen-mask :active="detailedImageUrl !== null" class="text-neutral-300" @click="onClickPageMask">
+      <div class="w-full h-full flex flex-col justify-center items-center px-8">
+        <img :src="detailedImageUrl!" class="w-[80vw] lg:w-auto lg:h-[50vh] aspect-square mb-2" />
+        <p class="mb-1 text-red-500">[Hint] the low-quality preview image is just for test phase.</p>
+        <p>Click anywhere to close.</p>
+      </div>
+    </screen-mask>
   </section>
 </template>
 
 <script setup lang="ts">
 import { ref, reactive } from 'vue'
 import { useWalletStore } from '@/store/wallet'
+import ScreenMask from '@/components/ScreenMask.vue'
 import { getOwnedNftCount, fetchNftMeta, NftMeta } from '@/services/web3/nft'
 
 const wallet = useWalletStore()
+const isWalletConnected = ref(false)
 const nftCount = ref(null as null | number)
 const nftMeta = reactive(Array<null | NftMeta>())
 const emptyImage = 'data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='
-const detailedImageUrl = ref(emptyImage)
+const detailedImageUrl = ref(null as null | string)
 
 async function init() {
-  const address = wallet.address!
+  const address = wallet.address
+
+  if (address === null) {
+    nftCount.value = 0 // indicates the loading is done
+    return
+  }
+  isWalletConnected.value = true
+
   nftCount.value = await getOwnedNftCount(address)
   for (let i = 0; i < nftCount.value; i++) {
     nftMeta.push(null)
@@ -69,9 +84,12 @@ function onNftImageLoaded(e: Event) {
 }
 
 function displayImage(e: Event) {
-  console.log('???')
   const target = e.target as HTMLImageElement
   detailedImageUrl.value = target.src
+}
+
+function onClickPageMask() {
+  detailedImageUrl.value = null
 }
 
 init()
