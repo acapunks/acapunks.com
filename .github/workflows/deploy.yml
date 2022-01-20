@@ -23,7 +23,7 @@ jobs:
       COMMIT_EMAIL: bot@acapunks.com
       COMMIT_NAME: acapunks-bot
       ACCESS_TOKEN: ${{ secrets.WEBSITE_CI }}
-      USERNAME: acapunks
+      USERNAME: parachain-labs
       REPONAME: acapunks.com
       TARGET_BRANCH: gh-pages
     steps:
