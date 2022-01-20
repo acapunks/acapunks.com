@@ -2,30 +2,34 @@
   <!-- https://stackoverflow.com/questions/1462138/event-listener-for-when-element-becomes-visible -->
   <section id="my-punks" class="container mx-auto grow py-20 px-4 flex items-center">
     <div class="w-full">
-      <div class="md:flex items-stretch h-[25vh]">
-        <div class="grow items-center" :class="nftCount && nftCount > 0 ? 'flex' : 'block'">
-          <div>
-            <h1 class="text-2xl md:text-3xl lg:text-4xl mb-1 text-center" :class="nftCount && nftCount > 0 ? 'text-left' : 'text-center'">
-              <span v-if="nftCount === null">Loading...</span>
-              <span v-else-if="nftCount === 0">You have no AcaPunks.</span>
-              <span v-else>You have {{ nftCount }} AcaPunks!</span>
-            </h1>
-            <p v-if="nftCount !== null" class="text-sm md:text-base" :class="nftCount && nftCount > 0 ? 'text-left' : 'text-center'">
-              <span v-if="nftCount === 0">
-                Click
-                <a href="/#mint">here</a> to Mint an AcaPunks!
-              </span>
-              <span v-else>
-                <a href="/#mint">Mint</a> more Punks.
-              </span>
+      <div class="md:flex items-stretch">
+        <div class="grow items-center">
+          <div class="text-2xl md:text-3xl lg:text-4xl">
+            <h1 class="text-center" v-if="address === null">Please connect to the wallet.</h1>
+            <h1 class="text-center" v-else-if="nftCount === null">Loading...</h1>
+            <h1 class="text-center" v-else-if="nftCount === 0">You have no AcaPunks.</h1>
+            <h1 v-else>You have {{ nftCount }} AcaPunks!</h1>
+          </div>
+          <!-- If the user is connected to a wallet and the page is not loading then show mint hint -->
+          <div v-if="address !== null && nftCount !== null" class="mt-1 text-sm md:text-base">
+            <p v-if="nftCount === 0" class="text-center">
+              <!-- If the user has no acapunks -->
+              Click
+              <a href="/#mint">here</a> to Mint an AcaPunks!
+            </p>
+            <p v-else>
+              <!-- If the user already has an acapunk -->
+              <a href="/#mint">Mint</a> more Punks.
             </p>
           </div>
         </div>
       </div>
-      <div v-if="nftCount !== 0" class="pt-4 mt-9 border-t border-slate-300">
+
+      <!-- If the user is connected to a wallet, the page is not loading, and the user has an acapunks -->
+      <div v-if="address !== null && nftCount" class="pt-4 mt-9 border-t border-slate-300">
         <p class="hidden md:block text-right mb-1">Click the punk to show the detail.</p>
-        <p class="text-red-500 text-right mb-1">[Hint] These are just fake punk images for testing. There may be duplicated images in the collection, which is guaranteed not to occur in the production. Each AcaPunk is distinct.</p>
-        <div class="grid grid-cols-2 md:grid-cols-6 xl:grid-cols-10 gap-4 mt-4">
+        <p class="text-red-500 text-right mb-1">[Hint] These are just fake punk images for testing.</p>
+        <div class="grid grid-cols-2 md:grid-cols-6 gap-4 mt-4">
           <div v-for="nft in nftMeta" class="punks-wrapper">
             <div class="w-full aspect-square relative">
               <div class="skeleton w-full h-full absolute top-0 left-0"></div>
@@ -49,12 +53,13 @@
 </template>
 
 <script setup lang="ts">
-import { ref, reactive } from 'vue'
+import { ref, reactive, toRef, watch } from 'vue'
 import { useWalletStore } from '@/store/wallet'
 import ScreenMask from '@/components/ScreenMask.vue'
 import { getOwnedNftCount, fetchNftMeta, NftMeta } from '@/services/web3/nft'
 
 const wallet = useWalletStore()
+const address = toRef(wallet, 'address')
 const isWalletConnected = ref(false)
 const nftCount = ref(null as null | number)
 const nftMeta = reactive(Array<null | NftMeta>())
@@ -62,20 +67,30 @@ const emptyImage = 'data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs='
 const detailedImageUrl = ref(null as null | string)
 
 async function init() {
-  const address = wallet.address
-
-  if (address === null) {
+  if (address.value === null) {
     nftCount.value = 0 // indicates the loading is done
     return
   }
   isWalletConnected.value = true
 
-  nftCount.value = await getOwnedNftCount(address)
+  nftCount.value = await getOwnedNftCount(address.value)
   for (let i = 0; i < nftCount.value; i++) {
     nftMeta.push(null)
   }
-  fetchNftMeta(wallet.address!, 0, nftCount.value, nftMeta)
+  fetchNftMeta(address.value, 0, nftCount.value, nftMeta)
 }
+
+watch(address, (cur: string | null) => {
+  // clear all punks
+  nftCount.value = null
+  nftMeta.length = 0
+
+  if (cur === null) {
+    return
+  }
+  // update page
+  init()
+})
 
 function onNftImageLoaded(e: Event) {
   // when the image is loaded remove the skeleton
