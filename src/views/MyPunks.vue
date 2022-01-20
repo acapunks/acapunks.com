@@ -8,6 +8,7 @@
             <h1 class="text-center" v-if="address === null">Please connect to the wallet.</h1>
             <h1 class="text-center" v-else-if="nftCount === null">Loading...</h1>
             <h1 class="text-center" v-else-if="nftCount === 0">You have no AcaPunks.</h1>
+            <h1 v-else-if="nftCount === 1">You have {{ nftCount }} AcaPunk!</h1>
             <h1 v-else>You have {{ nftCount }} AcaPunks!</h1>
           </div>
           <!-- If the user is connected to a wallet and the page is not loading then show mint hint -->

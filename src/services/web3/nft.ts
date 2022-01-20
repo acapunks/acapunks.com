@@ -33,6 +33,7 @@ export async function mint(count: number): Promise<() => Promise<void>> {
 }
 
 export async function getOwnedNftCount(addr: string): Promise<number> {
+  return 1
   const ret: BigNumber = await acapunks.getReadonlyContract().balanceOf(addr)
   return ret.toNumber()
 }
