@@ -12,7 +12,7 @@
         </p>
       </div>
       <div class="goals flex flex-col relative py-48">
-        <div class="timeline h-100 absolute left-0 top-0 bottom-0 w-36 border-r" style="border-right-color: hsla(0,0%,100%,.4);"></div>
+        <div class="timeline"></div>
         <div class="goal">
           <h3>Title 1</h3>
           <p>
@@ -56,20 +56,44 @@
 </template>
 
 <style lang="scss">
-.goals {
-  .goal {
-    @apply bg-[#04091a] p-16 pl-52;
+@import "@/assets/scss/color";
 
-    &:not(:last-child) {
-      @apply mb-12;
-    }
+#roadmap {
+  .timeline {
+    @apply absolute left-36 top-0 bottom-0 w-[2px];
+    border-right-color: hsla(0, 0%, 100%, 0.4);
+    background: $aca-gradient;
+  }
 
-    h3 {
-      @apply text-3xl text-white font-black;
-    }
+  .goals {
+    .goal {
+      @apply p-16 pl-52 bg-[#04091a] rounded-lg bg-opacity-20;
+      backdrop-filter: blur(2px);
+      // background: $aca-red;
 
-    p {
-      @apply mt-6;
+      &:nth-child(3n + 2) {
+        box-shadow: 0px 0px 0.5rem 5px $aca-orange, 0px 0px 0.5rem 1px $aca-orange inset;
+      }
+      &:nth-child(3n) {
+        box-shadow: 0px 0px 0.5rem 5px $aca-red, 0px 0px 0.5rem 1px $aca-red inset;
+      }
+      &:nth-child(3n + 1) {
+        box-shadow: 0px 0px 0.5rem 5px $aca-purple, 0px 0px 0.5rem 1px $aca-purple inset;
+      }
+
+      // box-shadow: 0px 0px 10px 10px rgba(1, 3, 13, 0.9) inset;
+
+      &:not(:last-child) {
+        @apply mb-24;
+      }
+
+      h3 {
+        @apply text-3xl text-white font-black;
+      }
+
+      p {
+        @apply mt-6;
+      }
     }
   }
 }

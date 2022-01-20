@@ -1,23 +1,24 @@
 $aca-purple: #645aff;
 $aca-red: #e40c5b;
 $aca-orange: #ff4c3b;
+$aca-gradient-angle: 328.08deg;
 
 $aca-gradient: linear-gradient(
-  328.08deg,
+  $aca-gradient-angle,
   $aca-purple -40.69%,
   $aca-red 36.17%,
   $aca-orange 79.87%
 );
 
 $aca-gradient-reverse: linear-gradient(
-  148.08deg,
+  calc($aca-gradient-angle - 180deg),
   $aca-purple -40.69%,
   $aca-red 36.17%,
   $aca-orange 79.87%
 );
 
 $aca-gradient-light: linear-gradient(
-  328.08deg,
+  $aca-gradient-angle,
   rgba($aca-purple, 0.5) -40.69%,
   rgba($aca-red, 0.5) 36.17%,
   rgba($aca-orange, 0.5) 79.87%
