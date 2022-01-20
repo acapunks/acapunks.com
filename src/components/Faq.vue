@@ -89,6 +89,10 @@
   .question {
     @apply relative lg:w-2/5 2xl:w-28/100 inline-block bg-white border border-gray-200 rounded-3xl shadow-md px-4 lg:px-8 pb-10;
 
+    &:not(:last-child) {
+      @apply mb-28 lg:mb-0;
+    }
+
     padding-top: 42px;
 
     .icon {
