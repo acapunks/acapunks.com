@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1920px" height="2044px" viewBox="0 0 1920 2044" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59.1 (86144) - https://sketch.com -->
+    <title>Group 95</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="5.23527296%" y1="50%" x2="100%" y2="50%" id="linearGradient-1">
+            <stop stop-color="#FBFCFD" offset="0%"></stop>
+            <stop stop-color="#F5F7F9" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-2">
+            <stop stop-color="#F6F7F8" offset="0%"></stop>
+            <stop stop-color="#EAEBEF" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="92.1786811%" y1="31.4212117%" x2="15.5320828%" y2="79.8757918%" id="linearGradient-3">
+            <stop stop-color="#F9FAFC" offset="0%"></stop>
+            <stop stop-color="#DFE0E2" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="34.3668751%" y1="0%" x2="69.9059858%" y2="90.9554584%" id="linearGradient-4">
+            <stop stop-color="#FEFEFF" offset="0%"></stop>
+            <stop stop-color="#F2F2F2" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="34.3668751%" y1="0%" x2="69.9059858%" y2="90.9554584%" id="linearGradient-5">
+            <stop stop-color="#FEFEFF" offset="0%"></stop>
+            <stop stop-color="#E9EEF1" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="34.3668751%" y1="0%" x2="69.9059858%" y2="90.9554584%" id="linearGradient-6">
+            <stop stop-color="#FEFEFF" offset="0%"></stop>
+            <stop stop-color="#EEEFF2" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="100%" y1="0%" x2="15.7972249%" y2="93.1036667%" id="linearGradient-7">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#F0F1F5" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="100%" y1="0%" x2="15.7972249%" y2="93.1036667%" id="linearGradient-8">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" offset="7.92878088%"></stop>
+            <stop stop-color="#F0F1F5" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ACALA-Copy-5" transform="translate(0.000000, -864.000000)">
+            <g id="Group-95" transform="translate(-326.000000, 816.231741)">
+                <g id="Group-Copy-3" transform="translate(412.500000, 1804.268259) rotate(-15.000000) translate(-412.500000, -1804.268259) translate(64.000000, 1511.768259)">
+                    <path d="M212,459 L270.947024,358.43468 C301.929447,350.144893 326.944216,346 345.991333,346 C374.562008,346 409.174205,345.847326 417.90295,350.499767 C423.722114,353.601394 440.421131,381.845735 468,435.232788 C422.160472,424.566673 379.493805,420.644479 340,423.466206 C300.506195,426.287933 257.839528,438.132531 212,459 Z" id="Path-4" fill="url(#linearGradient-1)"></path>
+                    <polygon id="Path-2" fill="url(#linearGradient-2)" points="0 512.74639 49.751004 585 299.919547 155.175873 556.862115 585 652 585 301.997323 0"></polygon>
+                    <path d="M50,585 L300.113729,155 L345.734323,231.461185 L211.825504,459.281937 C256.107879,437.037858 299.336197,424.689191 341.510457,422.235935 C383.684718,419.782678 425.57674,423.89117 467.186526,434.56141 L557,584.905836 C485.582225,526.019402 410.474139,499.645939 331.675741,505.785446 C252.877342,511.924953 189.539347,538.298416 141.661753,584.905836 L53.4396402,585" id="Path-3" fill="url(#linearGradient-3)"></path>
+                    <polygon id="Path-5" fill="url(#linearGradient-4)" points="302 0 391.12985 0 697 510.256058 652.431416 585"></polygon>
+                </g>
+                <g id="Group-Copy" transform="translate(2160.500000, 800.500000) rotate(-15.000000) translate(-2160.500000, -800.500000) translate(1812.000000, 508.000000)">
+                    <path d="M212,459 L270.947024,358.43468 C301.929447,350.144893 326.944216,346 345.991333,346 C374.562008,346 409.174205,345.847326 417.90295,350.499767 C423.722114,353.601394 440.421131,381.845735 468,435.232788 C422.160472,424.566673 379.493805,420.644479 340,423.466206 C300.506195,426.287933 257.839528,438.132531 212,459 Z" id="Path-4" fill="url(#linearGradient-1)"></path>
+                    <polygon id="Path-2" fill="url(#linearGradient-2)" points="0 512.74639 49.751004 585 299.919547 155.175873 556.862115 585 652 585 301.997323 0"></polygon>
+                    <path d="M50,585 L300.113729,155 L345.734323,231.461185 L211.825504,459.281937 C256.107879,437.037858 299.336197,424.689191 341.510457,422.235935 C383.684718,419.782678 425.57674,423.89117 467.186526,434.56141 L557,584.905836 C485.582225,526.019402 410.474139,499.645939 331.675741,505.785446 C252.877342,511.924953 189.539347,538.298416 141.661753,584.905836 L53.4396402,585" id="Path-3" fill="url(#linearGradient-3)"></path>
+                    <polygon id="Path-5" fill="url(#linearGradient-5)" points="302 0 391.12985 0 697 510.256058 652.431416 585"></polygon>
+                </g>
+                <g id="Group-Copy-2" transform="translate(688.500000, 373.268259) rotate(-15.000000) translate(-688.500000, -373.268259) translate(340.000000, 80.768259)">
+                    <path d="M212,459 L270.947024,358.43468 C301.929447,350.144893 326.944216,346 345.991333,346 C374.562008,346 409.174205,345.847326 417.90295,350.499767 C423.722114,353.601394 440.421131,381.845735 468,435.232788 C422.160472,424.566673 379.493805,420.644479 340,423.466206 C300.506195,426.287933 257.839528,438.132531 212,459 Z" id="Path-4" fill="url(#linearGradient-1)"></path>
+                    <polygon id="Path-2" fill="url(#linearGradient-2)" points="0 512.74639 49.751004 585 299.919547 155.175873 556.862115 585 652 585 301.997323 0"></polygon>
+                    <path d="M50,585 L300.113729,155 L345.734323,231.461185 L211.825504,459.281937 C256.107879,437.037858 299.336197,424.689191 341.510457,422.235935 C383.684718,419.782678 425.57674,423.89117 467.186526,434.56141 L557,584.905836 C485.582225,526.019402 410.474139,499.645939 331.675741,505.785446 C252.877342,511.924953 189.539347,538.298416 141.661753,584.905836 L53.4396402,585" id="Path-3" fill="url(#linearGradient-3)"></path>
+                    <polygon id="Path-5" fill="url(#linearGradient-6)" points="302 0 391.12985 0 697 510.256058 652.431416 585"></polygon>
+                </g>
+                <circle id="Oval" fill="url(#linearGradient-7)" transform="translate(274.000000, 947.768259) rotate(76.000000) translate(-274.000000, -947.768259) " cx="274" cy="947.768259" r="186"></circle>
+                <circle id="Oval-Copy-10" fill="url(#linearGradient-7)" transform="translate(2246.000000, 1584.768259) rotate(-255.000000) translate(-2246.000000, -1584.768259) " cx="2246" cy="1584.76826" r="186"></circle>
+                <circle id="Oval-Copy-4" fill="url(#linearGradient-8)" transform="translate(2195.000000, 234.000000) rotate(-91.000000) translate(-2195.000000, -234.000000) " cx="2195" cy="234" r="186"></circle>
+            </g>
+        </g>
+    </g>
+</svg>
