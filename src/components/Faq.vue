@@ -63,7 +63,7 @@
             However, it will be too late to get one at mint cost if they are sold out.
           </p>
         </div>
-
+        <!--
         <div class="question">
           <span class="icon">
             <fa icon="robot" />
@@ -75,6 +75,7 @@
             will be distributed to DAO token stakers.
           </p>
         </div>
+        -->
       </div>
     </div>
   </section>

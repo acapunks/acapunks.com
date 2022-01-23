@@ -1,7 +1,7 @@
 <template>
-  <section id="roadmap" class="bg-[#01030d] text-[#848198] py-48">
-    <div class="container mx-auto">
-      <div class="mb-24 px-96">
+  <section id="roadmap" class="bg-[#01030d] text-[#848198] py-24">
+    <div class="container mx-auto px-4">
+      <div class="mb-24 lg:px-[15vw]">
         <h2 class="text-center text-4xl mb-6 text-white font-black">Roadmap</h2>
         <p class="text-center">
           The AcaPunks aims to be a long-term community-driven project.Holders will be able
@@ -11,43 +11,40 @@
           DAO token stakers.
         </p>
       </div>
-      <div class="goals flex flex-col relative py-48">
+      <div class="goals flex flex-col relative py-24 lg:py-48">
         <div class="timeline"></div>
         <div class="goal">
-          <h3>Title 1</h3>
+          <h3>Welcome to the AcaPunks</h3>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis condimentum laoreet arcu, at faucibus
-            lectus condimentum et. Cras hendrerit eget tortor pellentesque vehicula. Quisque a interdum quam, et
-            fringilla velit. Suspendisse sit amet tincidunt mi. Fusce porta egestas fringilla. Vestibulum ante
-            ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Class aptent taciti sociosqu
-            ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam erat volutpat.
+            The official discord is open. Whitelists and free AcaPunks giveaways are held
+            to reward early supporters and community contributors.
           </p>
         </div>
         <div class="goal">
-          <h3>Title 2</h3>
+          <h3>Private Mint Start</h3>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis condimentum laoreet arcu, at faucibus
-            lectus condimentum et. Cras hendrerit eget tortor pellentesque vehicula. Quisque a interdum quam, et
-            fringilla velit. Suspendisse sit amet tincidunt mi. Fusce porta egestas fringilla. Vestibulum ante
-            ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Class aptent taciti sociosqu
-            ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam erat volutpat.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis condimentum laoreet arcu, at faucibus
-            lectus condimentum et. Cras hendrerit eget tortor pellentesque vehicula. Quisque a interdum quam, et
-            fringilla velit. Suspendisse sit amet tincidunt mi. Fusce porta egestas fringilla. Vestibulum ante
-            ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Class aptent taciti sociosqu
-            ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam erat volutpat.
+            Early supporters and community contributors will be able to mint one hour
+            before everyone else for their contribution.
           </p>
         </div>
         <div class="goal">
-          <h3>Title 3</h3>
+          <h3>$ART Token</h3>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis condimentum laoreet arcu, at faucibus
-            lectus condimentum et. Cras hendrerit eget tortor pellentesque vehicula. Quisque a interdum quam, et
-            fringilla velit. Suspendisse sit amet tincidunt mi. Fusce porta egestas fringilla. Vestibulum ante
-            ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Class aptent taciti sociosqu
-            ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam erat volutpat.
+            The staking contract will go online. Holders will be able to earn $ART by staking
+            their AcaPunks!
+          </p>
+        </div>
+        <div class="goal">
+          <h3>$aUSD Giveaways</h3>
+          <p>
+            1000 $aUSD prize will be given to people who mint all tribes of AcaPunks.
+          </p>
+        </div>
+        <div class="goal">
+          <h3>Acalart</h3>
+          <p>
+            Acalart — a DAO governed NFT marketplace will open. Transaction fees will be
+            distributed to $ART token stakers.
           </p>
         </div>
       </div>
@@ -60,14 +57,14 @@
 
 #roadmap {
   .timeline {
-    @apply absolute left-36 top-0 bottom-0 w-[2px];
+    @apply absolute left-8 lg:left-36 top-0 bottom-0 w-[2px];
     border-right-color: hsla(0, 0%, 100%, 0.4);
     background: $aca-gradient;
   }
 
   .goals {
     .goal {
-      @apply p-16 pl-52 bg-[#04091a] rounded-lg bg-opacity-20;
+      @apply p-8 pl-16 lg:p-16 lg:pl-52 bg-[#04091a] rounded-lg bg-opacity-20;
       backdrop-filter: blur(2px);
       // background: $aca-red;
 
@@ -88,7 +85,7 @@
       }
 
       h3 {
-        @apply text-3xl text-white font-black;
+        @apply text-2xl lg:text-3xl text-white font-black;
       }
 
       p {
